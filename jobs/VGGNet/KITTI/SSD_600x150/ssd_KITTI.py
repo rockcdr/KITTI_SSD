@@ -1,6 +1,6 @@
 from __future__ import print_function
 import sys
-sys.path.append('/home/bsl/caffe/python/')
+sys.path.append('/home/perception/KITTI_SSD/python/')
 import caffe
 from caffe.model_libs import *
 from google.protobuf import text_format
@@ -46,7 +46,7 @@ def AddExtraLayers(net, use_batchnorm=True):
 # The directory which contains the caffe code.
 # We assume you are running the script at the CAFFE_ROOT.
 caffe_root = os.getcwd()
-caffe_root = "/home/bsl/Debug/ssd_caffe"
+caffe_root = "/home/perception/KITTI_SSD/"
 
 
 # Set true if you want to start training right after generating all files.
@@ -58,9 +58,9 @@ resume_training = True
 remove_old_models = False
 
 # The database file for training data. Created by data/VOC0712/create_data.sh
-train_data = "/home/bsl/Debug/ssd_caffe/data/KITTI/lmdb/KITTI_train_lmdb"
+train_data = "/home/perception/KITTI_SSD/examples/KITTI/KITTI_train_lmdb"
 # The database file for testing data. Created by data/VOC0712/create_data.sh
-test_data = "/home/bsl/Debug/ssd_caffe/data/KITTI/lmdb/KITTI_test_lmdb"
+test_data ="/home/perception/KITTI_SSD/examples/KITTI/KITTI_test_lmdb" #"/home/bsl/Debug/ssd_caffe/data/KITTI/lmdb/KITTI_test_lmdb"
 # Specify the batch sampler.
 resize_width = 600
 resize_height = 150
@@ -198,11 +198,11 @@ job_name = "SSD_{}".format(resize)
 model_name = "VGG_KITTI_{}".format(job_name)
 
 # Directory which stores the model .prototxt file.
-save_dir = "/home/bsl/Debug/ssd_caffe/models/VGGNet/KITTI/{}".format(job_name)
+save_dir = caffe_root+"/models/VGGNet/KITTI/{}".format(job_name)
 # Directory which stores the snapshot of models.
-snapshot_dir = "/home/bsl/Debug/ssd_caffe/models/VGGNet/KITTI/{}".format(job_name)
+snapshot_dir = caffe_root+"/models/VGGNet/KITTI/{}".format(job_name)
 # Directory which stores the job script and log file.
-job_dir = "/home/bsl/Debug/ssd_caffe/jobs/VGGNet/KITTI/{}".format(job_name)
+job_dir = caffe_root+"/jobs/VGGNet/KITTI/{}".format(job_name)
 # Directory which stores the detection results.
 output_result_dir = "{}/data/KITTI/results/KITTI/{}/Main".format(os.environ['HOME'], job_name)
 
@@ -217,11 +217,11 @@ snapshot_prefix = "{}/{}".format(snapshot_dir, model_name)
 job_file = "{}/{}.sh".format(job_dir, model_name)
 
 # Stores the test image names and sizes. Created by data/VOC0712/create_list.sh
-name_size_file = "/home/bsl/Debug/ssd_caffe/data/KITTI/test_name_size.txt"
+name_size_file = caffe_root+"/data/KITTI/test_name_size.txt"
 # The pretrained model. We use the Fully convolutional reduced (atrous) VGGNet.
-pretrain_model = "/home/bsl/Debug/ssd_caffe/models/VGGNet/VGG_ILSVRC_16_layers_fc_reduced.caffemodel"
+pretrain_model = caffe_root+"/models/VGGNet/VGG_ILSVRC_16_layers_fc_reduced.caffemodel"
 # Stores LabelMapItem.
-label_map_file = "/home/bsl/Debug/ssd_caffe/data/KITTI/labelmap_KITTI.prototxt"
+label_map_file = caffe_root+"/data/KITTI/labelmap_KITTI.prototxt"
 
 # MultiBoxLoss parameters.
 num_classes = 4
@@ -286,10 +286,10 @@ clip = True
 
 # Solver parameters.
 # Defining which GPUs to use.
-#gpus = "0,1,2,3"
-#gpulist = gpus.split(",")
-gpus="0"
-gpulist="0"
+gpus = "0,1,2,3"
+gpulist = gpus.split(",")
+#gpus="0"
+#gpulist="0"
 num_gpus = len(gpulist)
 
 # Divide the mini-batch to different GPUs.

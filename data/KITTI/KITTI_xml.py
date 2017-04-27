@@ -102,12 +102,14 @@ if __name__ == '__main__':
     test_name_size= open('test_name_size.txt','w')
     for parent, dirnames, filenames in os.walk(dir):
         for file_name in filenames:
+            if not file_name.endswith('txt'):
+                continue
             full_path=os.path.join(parent, file_name)
             f=open(full_path)
             split_lines = f.readlines()
             name= file_name[:-4]
             img_name=name+'.png'
-            img_path=os.path.join('/home/bsl/Debug/ssd_caffe/data/KITTI/image_2',img_name)
+            img_path=os.path.join('/home/perception/data/kitti_pascal/image_2',img_name)
             img_size=cv2.imread(img_path).shape
             generate_xml(name,split_lines,img_size,class_ind)
             train_txt.write('image_2/'+img_name+' '+'label/'+name+'.xml'+'\n')

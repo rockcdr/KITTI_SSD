@@ -1,5 +1,5 @@
-train_net: "/home/bsl/Debug/ssd_caffe/models/VGGNet/KITTI/SSD_600x150/train.prototxt"
-test_net: "/home/bsl/Debug/ssd_caffe/models/VGGNet/KITTI/SSD_600x150/test.prototxt"
+train_net: "/home/perception/KITTI_SSD//models/VGGNet/KITTI/SSD_600x150/train.prototxt"
+test_net: "/home/perception/KITTI_SSD//models/VGGNet/KITTI/SSD_600x150/test.prototxt"
 test_iter: 7481
 test_interval: 10000
 base_lr: 0.001
@@ -11,7 +11,7 @@ momentum: 0.9
 weight_decay: 0.0005
 stepsize: 40000
 snapshot: 40000
-snapshot_prefix: "/home/bsl/Debug/ssd_caffe/models/VGGNet/KITTI/SSD_600x150/VGG_KITTI_SSD_600x150"
+snapshot_prefix: "/home/perception/KITTI_SSD//models/VGGNet/KITTI/SSD_600x150/VGG_KITTI_SSD_600x150"
 solver_mode: GPU
 device_id: 0
 debug_info: false

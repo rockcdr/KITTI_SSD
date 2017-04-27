@@ -1,6 +1,5 @@
-cd /home/bsl/Debug/ssd_caffe
+cd /home/perception/KITTI_SSD/
 ./build/tools/caffe train \
---solver="/home/bsl/Debug/ssd_caffe/models/VGGNet/KITTI/SSD_600x150/solver.prototxt" \
---weights="/home/bsl/Debug/ssd_caffe/models/VGGNet/VGG_ILSVRC_16_layers_fc_reduced.caffemodel" \
----iterations=7481 \
---gpu 0 2>&1 | tee /home/bsl/Debug/ssd_caffe/jobs/VGGNet/KITTI/SSD_600x150/VGG_KITTI_SSD_600x150.log
+--solver="/home/perception/KITTI_SSD//models/VGGNet/KITTI/SSD_600x150/solver.prototxt" \
+--snapshot="/home/perception/KITTI_SSD//models/VGGNet/KITTI/SSD_600x150/VGG_KITTI_SSD_600x150_iter_56231.solverstate" \
+--gpu 0,1,2,3 2>&1 | tee /home/perception/KITTI_SSD//jobs/VGGNet/KITTI/SSD_600x150/VGG_KITTI_SSD_600x150.log

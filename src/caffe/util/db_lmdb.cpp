@@ -10,6 +10,7 @@ namespace caffe { namespace db {
 const size_t LMDB_MAP_SIZE = 1099511627776;  // 1 TB
 
 void LMDB::Open(const string& source, Mode mode) {
+  LOG(INFO) << "Jerry: openning source lmdb: "<<source;
   MDB_CHECK(mdb_env_create(&mdb_env_));
   MDB_CHECK(mdb_env_set_mapsize(mdb_env_, LMDB_MAP_SIZE));
   if (mode == NEW) {

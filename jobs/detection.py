@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/home/bsl/caffe/python/')
+sys.path.insert(1,'/home/perception/KITTI_SSD/python/')
 import caffe
 import os
 import numpy as np
@@ -29,7 +29,9 @@ class Timer(object):
             return self.average_time
         else:
             return self.diff
-caffe_root = "/home/bsl/Debug/ssd_caffe/"
+            
+            
+caffe_root = "/home/perception/KITTI_SSD/"
 if os.path.isfile(caffe_root + 'models/VGGNet/KITTI/SSD_600x150/VGG_KITTI_SSD_600x150_iter_60000.caffemodel'):
     print 'CaffeNet found.'
 else:
@@ -48,15 +50,20 @@ transformer.set_raw_scale('data', 255)      # rescale from [0, 1] to [0, 255]
 transformer.set_channel_swap('data', (2,1,0))  # swap channels from RGB to BGR
 net.blobs['data'].reshape(1,3,150, 600)
 
-test_image_path=caffe_root+'data/KITTI/training/data_object_image_2/testing/image_2'
+test_image_path=caffe_root+'data/KITTI/image_2/'
 color=[(255,0,0),(0,255,0),(0,0,255)]
 visualize_threshold=0.6
 for parent, dirnames, filenames in os.walk(test_image_path):
     for filename in filenames:
+        if not filename.endswith('.png'):
+            continue;
         timer = Timer()
-        img_path=caffe_root + 'data/KITTI/training/data_object_image_2/testing/image_2/'+filename
+        img_path=test_image_path+filename
+        #caffe_root + 'data/KITTI/training/data_object_image_2/testing/image_2/'+filename
         result_path=caffe_root + 'data/KITTI/results/'+filename
         image = caffe.io.load_image(img_path)
+        
+        
         transformed_image = transformer.preprocess('data', image)
         net.blobs['data'].data[...] = transformed_image
         timer.tic()
@@ -73,11 +80,11 @@ for parent, dirnames, filenames in os.walk(test_image_path):
                 ymin=int(detectors[i][4]*size[0])
                 xmax=int(detectors[i][5]*size[1])
                 ymax=int(detectors[i][6]*size[0])
-                label=detectors[i][1]
+                label=detectors[i][1] 
                 rect_start=(xmin,ymin)
                 rect_end=(xmax,ymax)
                 cv2.rectangle(img, rect_start, rect_end, color[int(label-1)], 2)
-        #cv2.imshow('image',img)
+        cv2.imshow('image',img)
         #cv2.waitKey(0)
-        cv2.imwrite(result_path,img)
+        #cv2.imwrite(result_path,img)
         print ('Detection took {:.3f}s').format(timer.total_time)

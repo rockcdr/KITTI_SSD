@@ -20,14 +20,14 @@ layer {
     }
   }
   data_param {
-    source: "/home/bsl/Debug/ssd_caffe/data/KITTI/lmdb/KITTI_test_lmdb"
+    source: "/home/perception/KITTI_SSD/examples/KITTI/KITTI_test_lmdb"
     batch_size: 1
     backend: LMDB
   }
   annotated_data_param {
     batch_sampler {
     }
-    label_map_file: "/home/bsl/Debug/ssd_caffe/data/KITTI/labelmap_KITTI.prototxt"
+    label_map_file: "/home/perception/KITTI_SSD//data/KITTI/labelmap_KITTI.prototxt"
   }
 }
 layer {
@@ -1568,11 +1568,11 @@ layer {
       top_k: 400
     }
     save_output_param {
-      output_directory: "/home/bsl/data/KITTI/results/KITTI/SSD_600x150/Main"
+      output_directory: "/home/perception/data/KITTI/results/KITTI/SSD_600x150/Main"
       output_name_prefix: "comp4_det_test_"
       output_format: "VOC"
-      label_map_file: "/home/bsl/Debug/ssd_caffe/data/KITTI/labelmap_KITTI.prototxt"
-      name_size_file: "/home/bsl/Debug/ssd_caffe/data/KITTI/test_name_size.txt"
+      label_map_file: "/home/perception/KITTI_SSD//data/KITTI/labelmap_KITTI.prototxt"
+      name_size_file: "/home/perception/KITTI_SSD//data/KITTI/test_name_size.txt"
       num_test_image: 7481
     }
     code_type: CENTER_SIZE
@@ -1594,7 +1594,7 @@ layer {
     background_label_id: 0
     overlap_threshold: 0.5
     evaluate_difficult_gt: false
-    name_size_file: "/home/bsl/Debug/ssd_caffe/data/KITTI/test_name_size.txt"
+    name_size_file: "/home/perception/KITTI_SSD//data/KITTI/test_name_size.txt"
   }
 }
 

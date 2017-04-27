@@ -17,6 +17,7 @@ if(HAVE_CUDA)
   list(APPEND srcs ${cuda_objs} ${cuda})
 endif()
 
+set(CMAKE_SHARED_LINKER_FLAGS "-L/usr/local/lib -Wl,-Bstatic -lprotobuf -Wl,-Bdynamic -pthread -lpthread ${CMAKE_SHARED_LINKER_FLAGS}")
 add_library(caffe ${srcs})
 target_link_libraries(caffe proto ${Caffe_LINKER_LIBS})
 caffe_default_properties(caffe)
