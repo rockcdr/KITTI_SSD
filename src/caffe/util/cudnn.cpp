@@ -1,7 +1,7 @@
 #ifdef USE_CUDNN
 #include "caffe/util/cudnn.hpp"
 
-namespace caffe {
+namespace caffe9 {
 namespace cudnn {
 
 float dataType<float>::oneval = 1.0;
@@ -19,5 +19,5 @@ const void* dataType<double>::zero =
     static_cast<void *>(&dataType<double>::zeroval);
 
 }  // namespace cudnn
-}  // namespace caffe
+}  // namespace caffe9
 #endif

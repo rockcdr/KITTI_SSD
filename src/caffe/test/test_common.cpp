@@ -6,7 +6,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 class CommonTest : public ::testing::Test {};
 
@@ -61,4 +61,4 @@ TEST_F(CommonTest, TestRandSeedGPU) {
 
 #endif
 
-}  // namespace caffe
+}  // namespace caffe9

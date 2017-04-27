@@ -9,7 +9,7 @@
 
 #include "caffe/layers/loss_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Computes the hinge loss for a one-of-many classification task.
@@ -99,6 +99,6 @@ class HingeLossLayer : public LossLayer<Dtype> {
 };
 
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_HINGE_LOSS_LAYER_HPP_

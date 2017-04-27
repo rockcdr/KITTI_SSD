@@ -10,7 +10,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename TypeParam>
 class MemoryDataLayerTest : public MultiDeviceTest<TypeParam> {
@@ -296,4 +296,4 @@ TYPED_TEST(MemoryDataLayerTest, TestSetBatchSize) {
   }
 }
 #endif  // USE_OPENCV
-}  // namespace caffe
+}  // namespace caffe9

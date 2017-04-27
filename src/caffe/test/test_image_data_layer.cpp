@@ -14,7 +14,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename TypeParam>
 class ImageDataLayerTest : public MultiDeviceTest<TypeParam> {
@@ -177,5 +177,5 @@ TYPED_TEST(ImageDataLayerTest, TestShuffle) {
   }
 }
 
-}  // namespace caffe
+}  // namespace caffe9
 #endif  // USE_OPENCV

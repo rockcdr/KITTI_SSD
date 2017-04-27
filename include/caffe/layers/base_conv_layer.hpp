@@ -8,7 +8,7 @@
 #include "caffe/proto/caffe.pb.h"
 #include "caffe/util/im2col.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Abstract base class that factors out the BLAS code common to
@@ -169,6 +169,6 @@ class BaseConvolutionLayer : public Layer<Dtype> {
   Blob<Dtype> bias_multiplier_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_BASE_CONVOLUTION_LAYER_HPP_

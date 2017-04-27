@@ -12,7 +12,7 @@
 #include "caffe/layers/base_data_layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Provides data to the Net from image files.
@@ -42,6 +42,6 @@ class ImageDataLayer : public BasePrefetchingDataLayer<Dtype> {
 };
 
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_IMAGE_DATA_LAYER_HPP_

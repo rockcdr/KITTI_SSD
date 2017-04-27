@@ -3,7 +3,7 @@
 
 #include "caffe/layers/cudnn_pooling_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void CuDNNPoolingLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -42,5 +42,5 @@ CuDNNPoolingLayer<Dtype>::~CuDNNPoolingLayer() {
 
 INSTANTIATE_CLASS(CuDNNPoolingLayer);
 
-}   // namespace caffe
+}   // namespace caffe9
 #endif

@@ -18,10 +18,10 @@
 #include "caffe/util/db.hpp"
 #include "caffe/util/format.hpp"
 
-using caffe::Datum;
+using caffe9::Datum;
 using boost::scoped_ptr;
 using std::string;
-namespace db = caffe::db;
+namespace db = caffe9::db;
 
 const int kCIFARSize = 32;
 const int kCIFARImageNBytes = 3072;
@@ -54,7 +54,7 @@ void convert_dataset(const string& input_folder, const string& output_folder,
     // Open files
     LOG(INFO) << "Training Batch " << fileid + 1;
     string batchFileName = input_folder + "/data_batch_"
-      + caffe::format_int(fileid+1) + ".bin";
+      + caffe9::format_int(fileid+1) + ".bin";
     std::ifstream data_file(batchFileName.c_str(),
         std::ios::in | std::ios::binary);
     CHECK(data_file) << "Unable to open train file #" << fileid + 1;
@@ -64,7 +64,7 @@ void convert_dataset(const string& input_folder, const string& output_folder,
       datum.set_data(str_buffer, kCIFARImageNBytes);
       string out;
       CHECK(datum.SerializeToString(&out));
-      txn->Put(caffe::format_int(fileid * kCIFARBatchSize + itemid, 5), out);
+      txn->Put(caffe9::format_int(fileid * kCIFARBatchSize + itemid, 5), out);
     }
   }
   txn->Commit();
@@ -84,7 +84,7 @@ void convert_dataset(const string& input_folder, const string& output_folder,
     datum.set_data(str_buffer, kCIFARImageNBytes);
     string out;
     CHECK(datum.SerializeToString(&out));
-    txn->Put(caffe::format_int(itemid, 5), out);
+    txn->Put(caffe9::format_int(itemid, 5), out);
   }
   txn->Commit();
   test_db->Close();

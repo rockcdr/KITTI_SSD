@@ -10,7 +10,7 @@
 #include "caffe/test/test_caffe_main.hpp"
 #include "caffe/test/test_gradient_check_util.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 #ifndef CPU_ONLY
 extern cudaDeviceProp CAFFE_TEST_CUDA_PROP;
@@ -388,4 +388,4 @@ TYPED_TEST(InnerProductLayerTest, TestBackwardTranspose) {
   }
 }
 
-}  // namespace caffe
+}  // namespace caffe9

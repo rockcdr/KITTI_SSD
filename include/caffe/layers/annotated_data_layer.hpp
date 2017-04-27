@@ -13,7 +13,7 @@
 #include "caffe/proto/caffe.pb.h"
 #include "caffe/util/db.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 class AnnotatedDataLayer : public BasePrefetchingDataLayer<Dtype> {
@@ -38,6 +38,6 @@ class AnnotatedDataLayer : public BasePrefetchingDataLayer<Dtype> {
   string label_map_file_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_DATA_LAYER_HPP_

@@ -8,7 +8,7 @@
 
 #include "caffe/blob.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void hdf5_load_nd_dataset_helper(
@@ -34,6 +34,6 @@ void hdf5_save_string(hid_t loc_id, const string& dataset_name,
 int hdf5_get_num_links(hid_t loc_id);
 string hdf5_get_name_by_idx(hid_t loc_id, int idx);
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif   // CAFFE_UTIL_HDF5_H_

@@ -8,7 +8,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 class BlobSimpleTest : public ::testing::Test {
@@ -290,4 +290,4 @@ TYPED_TEST(BlobMathTest, TestScaleData) {
               this->epsilon_ * expected_diff_asum);
 }
 
-}  // namespace caffe
+}  // namespace caffe9

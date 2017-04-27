@@ -2,7 +2,7 @@
 
 #include "caffe/layers/threshold_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void ThresholdLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -29,4 +29,4 @@ STUB_GPU_FORWARD(ThresholdLayer, Forward);
 INSTANTIATE_CLASS(ThresholdLayer);
 REGISTER_LAYER_CLASS(Threshold);
 
-}  // namespace caffe
+}  // namespace caffe9

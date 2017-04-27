@@ -11,7 +11,7 @@
 #include "caffe/test/test_caffe_main.hpp"
 #include "caffe/test/test_gradient_check_util.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 double tanh_naive(double x) {
   if (x < -40) {
@@ -98,4 +98,4 @@ TYPED_TEST(TanHLayerTest, TestTanHGradient) {
   this->TestBackward(1.0);
 }
 
-}  // namespace caffe
+}  // namespace caffe9

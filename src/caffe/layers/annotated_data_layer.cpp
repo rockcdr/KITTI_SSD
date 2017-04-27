@@ -12,7 +12,7 @@
 #include "caffe/util/benchmark.hpp"
 #include "caffe/util/sampler.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 AnnotatedDataLayer<Dtype>::AnnotatedDataLayer(const LayerParameter& param)
@@ -237,4 +237,4 @@ void AnnotatedDataLayer<Dtype>::load_batch(Batch<Dtype>* batch) {
 INSTANTIATE_CLASS(AnnotatedDataLayer);
 REGISTER_LAYER_CLASS(AnnotatedData);
 
-}  // namespace caffe
+}  // namespace caffe9

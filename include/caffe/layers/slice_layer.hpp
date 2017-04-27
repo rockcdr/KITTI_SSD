@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Takes a Blob and slices it along either the num or channel dimension,
@@ -46,6 +46,6 @@ class SliceLayer : public Layer<Dtype> {
   vector<int> slice_point_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_SLICE_LAYER_HPP_

@@ -9,7 +9,7 @@
 
 #include "caffe/layers/conv_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 #ifdef USE_CUDNN
 /*
@@ -67,6 +67,6 @@ class CuDNNConvolutionLayer : public ConvolutionLayer<Dtype> {
 };
 #endif
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_CUDNN_CONV_LAYER_HPP_

@@ -9,7 +9,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename TypeParam>
 class ThresholdLayerTest : public MultiDeviceTest<TypeParam> {
@@ -95,4 +95,4 @@ TYPED_TEST(ThresholdLayerTest, Test2) {
   }
 }
 
-}  // namespace caffe
+}  // namespace caffe9

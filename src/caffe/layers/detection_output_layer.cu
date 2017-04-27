@@ -14,7 +14,7 @@
 
 #include "caffe/layers/detection_output_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void DetectionOutputLayer<Dtype>::Forward_gpu(
@@ -289,4 +289,4 @@ void DetectionOutputLayer<Dtype>::Forward_gpu(
 
 INSTANTIATE_LAYER_GPU_FUNCS(DetectionOutputLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Compute the index of the @f$ K @f$ max values for each datum across
@@ -72,6 +72,6 @@ class ArgMaxLayer : public Layer<Dtype> {
   int axis_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_ARGMAX_LAYER_HPP_

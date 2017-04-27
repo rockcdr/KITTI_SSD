@@ -17,7 +17,7 @@ TODO:
 #include "caffe/layers/hdf5_data_layer.hpp"
 #include "caffe/util/hdf5.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 HDF5DataLayer<Dtype>::~HDF5DataLayer<Dtype>() { }
@@ -163,4 +163,4 @@ STUB_GPU_FORWARD(HDF5DataLayer, Forward);
 INSTANTIATE_CLASS(HDF5DataLayer);
 REGISTER_LAYER_CLASS(HDF5Data);
 
-}  // namespace caffe
+}  // namespace caffe9

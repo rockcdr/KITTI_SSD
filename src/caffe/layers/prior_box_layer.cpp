@@ -5,7 +5,7 @@
 
 #include "caffe/layers/prior_box_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void PriorBoxLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -163,4 +163,4 @@ void PriorBoxLayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom,
 INSTANTIATE_CLASS(PriorBoxLayer);
 REGISTER_LAYER_CLASS(PriorBox);
 
-}  // namespace caffe
+}  // namespace caffe9

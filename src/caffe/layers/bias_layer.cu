@@ -4,7 +4,7 @@
 #include "caffe/layers/bias_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 __global__ void BiasForward(const int n, const Dtype* in,
@@ -56,4 +56,4 @@ void BiasLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 
 INSTANTIATE_LAYER_GPU_FUNCS(BiasLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

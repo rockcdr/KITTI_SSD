@@ -3,7 +3,7 @@
 #include "caffe/layers/im2col_layer.hpp"
 #include "caffe/util/im2col.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void Im2colLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -190,4 +190,4 @@ STUB_GPU(Im2colLayer);
 INSTANTIATE_CLASS(Im2colLayer);
 REGISTER_LAYER_CLASS(Im2col);
 
-}  // namespace caffe
+}  // namespace caffe9

@@ -4,7 +4,7 @@
 #include "caffe/layers/bias_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void BiasLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -118,4 +118,4 @@ STUB_GPU(BiasLayer);
 INSTANTIATE_CLASS(BiasLayer);
 REGISTER_LAYER_CLASS(Bias);
 
-}  // namespace caffe
+}  // namespace caffe9

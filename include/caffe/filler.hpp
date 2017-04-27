@@ -12,7 +12,7 @@
 #include "caffe/syncedmem.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /// @brief Fills a Blob with constant or randomly-generated data.
 template <typename Dtype>
@@ -290,6 +290,6 @@ Filler<Dtype>* GetFiller(const FillerParameter& param) {
   return (Filler<Dtype>*)(NULL);
 }
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_FILLER_HPP_

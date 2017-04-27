@@ -3,7 +3,7 @@
 
 #include "caffe/layers/bnll_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 const float kBNLL_THRESHOLD = 50.;
 
@@ -44,4 +44,4 @@ STUB_GPU(BNLLLayer);
 INSTANTIATE_CLASS(BNLLLayer);
 REGISTER_LAYER_CLASS(BNLL);
 
-}  // namespace caffe
+}  // namespace caffe9

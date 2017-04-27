@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief A helper for image operations that rearranges image regions into
@@ -60,6 +60,6 @@ class Im2colLayer : public Layer<Dtype> {
   bool force_nd_im2col_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_IM2COL_LAYER_HPP_

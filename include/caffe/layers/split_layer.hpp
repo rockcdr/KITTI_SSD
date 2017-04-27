@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Creates a "split" path in the network by copying the bottom Blob
@@ -40,6 +40,6 @@ class SplitLayer : public Layer<Dtype> {
   int count_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_SPLIT_LAYER_HPP_

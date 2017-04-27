@@ -6,7 +6,7 @@
 #include "caffe/common.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe { namespace db {
+namespace caffe9 { namespace db {
 
 enum Mode { READ, WRITE, NEW };
 
@@ -49,6 +49,6 @@ DB* GetDB(DataParameter::DB backend);
 DB* GetDB(const string& backend);
 
 }  // namespace db
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_UTIL_DB_HPP

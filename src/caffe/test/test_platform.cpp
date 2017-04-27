@@ -8,7 +8,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 extern cudaDeviceProp CAFFE_TEST_CUDA_PROP;
 
@@ -52,6 +52,6 @@ TEST_F(PlatformTest, TestInitialization) {
   EXPECT_TRUE(true);
 }
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CPU_ONLY

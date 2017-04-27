@@ -6,7 +6,7 @@
 
 #include "caffe/solver.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Optimizes the parameters of a Net using
@@ -143,6 +143,6 @@ class AdamSolver : public SGDSolver<Dtype> {
   DISABLE_COPY_AND_ASSIGN(AdamSolver);
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_SGD_SOLVERS_HPP_

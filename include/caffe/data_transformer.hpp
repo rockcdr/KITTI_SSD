@@ -11,7 +11,7 @@
 
 using google::protobuf::RepeatedPtrField;
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Applies common transformations to the input data, such as
@@ -233,6 +233,6 @@ class DataTransformer {
   vector<Dtype> mean_values_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_DATA_TRANSFORMER_HPP_

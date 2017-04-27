@@ -10,7 +10,7 @@
 #include "caffe/layers/loss_layer.hpp"
 #include "caffe/layers/softmax_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Computes the multinomial logistic loss for a one-of-many
@@ -118,6 +118,6 @@ class SoftmaxWithLossLayer : public LossLayer<Dtype> {
   int softmax_axis_, outer_num_, inner_num_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_SOFTMAX_WITH_LOSS_LAYER_HPP_

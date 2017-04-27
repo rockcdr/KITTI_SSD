@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Pools the input image by taking the max, average, etc. within regions.
@@ -55,6 +55,6 @@ class PoolingLayer : public Layer<Dtype> {
   Blob<int> max_idx_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_POOLING_LAYER_HPP_

@@ -9,7 +9,7 @@
 
 #include "caffe/layers/base_data_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Provides data to the Net from memory.
@@ -58,6 +58,6 @@ class MemoryDataLayer : public BaseDataLayer<Dtype> {
   bool has_new_data_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_MEMORY_DATA_LAYER_HPP_

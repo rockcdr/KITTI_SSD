@@ -9,7 +9,7 @@
 #include "caffe/layers/data_layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 using boost::weak_ptr;
 
@@ -135,4 +135,4 @@ void DataReader<T>::Body::read_one(db::Cursor* cursor, QueuePair* qp) {
 template class DataReader<Datum>;
 template class DataReader<AnnotatedDatum>;
 
-}  // namespace caffe
+}  // namespace caffe9

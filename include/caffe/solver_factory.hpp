@@ -45,7 +45,7 @@
 #include "caffe/common.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 class Solver;
@@ -132,6 +132,6 @@ class SolverRegisterer {
   }                                                                            \
   REGISTER_SOLVER_CREATOR(type, Creator_##type##Solver)
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_SOLVER_FACTORY_H_

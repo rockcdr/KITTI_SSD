@@ -2,7 +2,7 @@
 
 #include "caffe/sgd_solvers.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void AdamSolver<Dtype>::AdamPreSolve() {
@@ -91,4 +91,4 @@ void AdamSolver<Dtype>::ComputeUpdateValue(int param_id, Dtype rate) {
 INSTANTIATE_CLASS(AdamSolver);
 REGISTER_SOLVER_CLASS(Adam);
 
-}  // namespace caffe
+}  // namespace caffe9

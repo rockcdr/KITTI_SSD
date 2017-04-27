@@ -9,7 +9,7 @@
 
 #include "caffe/layers/neuron_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Exponential Linear Unit non-linearity @f$
@@ -81,6 +81,6 @@ class ELULayer : public NeuronLayer<Dtype> {
 };
 
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_ELU_LAYER_HPP_

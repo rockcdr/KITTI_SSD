@@ -2,7 +2,7 @@
 
 #include "caffe/layers/conv_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void ConvolutionLayer<Dtype>::compute_output_shape() {
@@ -78,4 +78,4 @@ STUB_GPU(ConvolutionLayer);
 
 INSTANTIATE_CLASS(ConvolutionLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

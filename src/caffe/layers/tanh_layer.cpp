@@ -5,7 +5,7 @@
 
 #include "caffe/layers/tanh_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void TanHLayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom,
@@ -41,4 +41,4 @@ STUB_GPU(TanHLayer);
 
 INSTANTIATE_CLASS(TanHLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

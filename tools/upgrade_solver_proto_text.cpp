@@ -13,7 +13,7 @@
 
 using std::ofstream;
 
-using namespace caffe;  // NOLINT(build/namespaces)
+using namespace caffe9;  // NOLINT(build/namespaces)
 
 int main(int argc, char** argv) {
   FLAGS_alsologtostderr = 1;  // Print output to stderr (while still logging)

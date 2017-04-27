@@ -9,7 +9,7 @@
 
 #include "caffe/layers/neuron_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Computes @f$ y = |x| @f$
@@ -63,6 +63,6 @@ class AbsValLayer : public NeuronLayer<Dtype> {
       const vector<bool>& propagate_down, const vector<Blob<Dtype>*>& bottom);
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_ABSVAL_LAYER_HPP_

@@ -23,7 +23,7 @@
 
 #include "caffe/util/io.hpp"
 
-using namespace caffe;  // NOLINT(build/namespaces)
+using namespace caffe9;  // NOLINT(build/namespaces)
 
 DEFINE_string(name_id_file, "",
               "A file which maps image_name to image_id.");

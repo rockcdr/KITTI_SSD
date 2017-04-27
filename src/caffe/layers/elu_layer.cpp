@@ -3,7 +3,7 @@
 
 #include "caffe/layers/elu_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void ELULayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom,
@@ -44,4 +44,4 @@ STUB_GPU(ELULayer);
 INSTANTIATE_CLASS(ELULayer);
 REGISTER_LAYER_CLASS(ELU);
 
-}  // namespace caffe
+}  // namespace caffe9

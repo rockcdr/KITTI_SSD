@@ -8,7 +8,7 @@
 #include "caffe/common.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <>
 void caffe_gpu_gemm<float>(const CBLAS_TRANSPOSE TransA,
@@ -415,4 +415,4 @@ void caffe_gpu_rng_gaussian(const int n, const double mu, const double sigma,
       curandGenerateNormalDouble(Caffe::curand_generator(), r, n, mu, sigma));
 }
 
-}  // namespace caffe
+}  // namespace caffe9

@@ -3,7 +3,7 @@
 #include "caffe/layers/concat_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 __global__ void Concat(const int nthreads, const Dtype* in_data,
@@ -70,4 +70,4 @@ void ConcatLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 
 INSTANTIATE_LAYER_GPU_FUNCS(ConcatLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

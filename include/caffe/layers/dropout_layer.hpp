@@ -9,7 +9,7 @@
 
 #include "caffe/layers/neuron_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief During training only, sets a random portion of @f$x@f$ to 0, adjusting
@@ -75,6 +75,6 @@ class DropoutLayer : public NeuronLayer<Dtype> {
   unsigned int uint_thres_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_DROPOUT_LAYER_HPP_

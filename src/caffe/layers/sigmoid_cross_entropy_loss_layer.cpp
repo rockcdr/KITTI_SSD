@@ -3,7 +3,7 @@
 #include "caffe/layers/sigmoid_cross_entropy_loss_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void SigmoidCrossEntropyLossLayer<Dtype>::LayerSetUp(
@@ -74,4 +74,4 @@ STUB_GPU_BACKWARD(SigmoidCrossEntropyLossLayer, Backward);
 INSTANTIATE_CLASS(SigmoidCrossEntropyLossLayer);
 REGISTER_LAYER_CLASS(SigmoidCrossEntropyLoss);
 
-}  // namespace caffe
+}  // namespace caffe9

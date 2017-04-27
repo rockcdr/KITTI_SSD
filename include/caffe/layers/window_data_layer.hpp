@@ -12,7 +12,7 @@
 #include "caffe/layers/base_data_layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Provides data to the Net from windows of images files, specified
@@ -50,6 +50,6 @@ class WindowDataLayer : public BasePrefetchingDataLayer<Dtype> {
   vector<std::pair<std::string, Datum > > image_database_cache_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_WINDOW_DATA_LAYER_HPP_

@@ -1,7 +1,7 @@
 #include "caffe/util/math_functions.hpp"
 
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 __global__ void AdaGradUpdate(int N, Dtype* g, Dtype* h, Dtype delta,
@@ -23,4 +23,4 @@ void adagrad_update_gpu(int N, Dtype* g, Dtype* h, Dtype delta,
 template void adagrad_update_gpu<float>(int, float*, float*, float, float);
 template void adagrad_update_gpu<double>(int, double*, double*, double, double);
 
-}  // namespace caffe
+}  // namespace caffe9

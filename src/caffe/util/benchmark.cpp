@@ -3,7 +3,7 @@
 #include "caffe/common.hpp"
 #include "caffe/util/benchmark.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 Timer::Timer()
     : initted_(false),
@@ -165,4 +165,4 @@ float CPUTimer::MicroSeconds() {
   return this->elapsed_microseconds_;
 }
 
-}  // namespace caffe
+}  // namespace caffe9

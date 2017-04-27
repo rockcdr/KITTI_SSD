@@ -31,7 +31,7 @@
 #include "caffe/util/io.hpp"
 #include "caffe/util/rng.hpp"
 
-using namespace caffe;  // NOLINT(build/namespaces)
+using namespace caffe9;  // NOLINT(build/namespaces)
 using std::pair;
 using boost::scoped_ptr;
 
@@ -181,7 +181,7 @@ int main(int argc, char** argv) {
       }
     }
     // sequential
-    string key_str = caffe::format_int(line_id, 8) + "_" + lines[line_id].first;
+    string key_str = caffe9::format_int(line_id, 8) + "_" + lines[line_id].first;
 
     // Put in db
     string out;

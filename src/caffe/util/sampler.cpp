@@ -4,7 +4,7 @@
 #include "caffe/util/bbox_util.hpp"
 #include "caffe/util/sampler.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 void GroupObjectBBoxes(const AnnotatedDatum& anno_datum,
                        vector<NormalizedBBox>* object_bboxes) {
@@ -157,4 +157,4 @@ void GenerateBatchSamples(const AnnotatedDatum& anno_datum,
   }
 }
 
-}  // namespace caffe
+}  // namespace caffe9

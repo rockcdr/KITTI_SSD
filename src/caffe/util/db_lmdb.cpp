@@ -5,7 +5,7 @@
 
 #include <string>
 
-namespace caffe { namespace db {
+namespace caffe9 { namespace db {
 
 const size_t LMDB_MAP_SIZE = 1099511627776;  // 1 TB
 
@@ -65,5 +65,5 @@ void LMDBTransaction::Put(const string& key, const string& value) {
 }
 
 }  // namespace db
-}  // namespace caffe
+}  // namespace caffe9
 #endif  // USE_LMDB

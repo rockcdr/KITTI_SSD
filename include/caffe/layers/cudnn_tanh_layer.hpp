@@ -10,7 +10,7 @@
 #include "caffe/layers/neuron_layer.hpp"
 #include "caffe/layers/tanh_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 #ifdef USE_CUDNN
 /**
@@ -40,6 +40,6 @@ class CuDNNTanHLayer : public TanHLayer<Dtype> {
 };
 #endif
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_CUDNN_TANH_LAYER_HPP_

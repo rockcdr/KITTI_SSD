@@ -12,7 +12,7 @@
 #include "caffe/util/db.hpp"
 #include "caffe/util/io.hpp"
 
-using namespace caffe;  // NOLINT(build/namespaces)
+using namespace caffe9;  // NOLINT(build/namespaces)
 
 using std::max;
 using std::pair;

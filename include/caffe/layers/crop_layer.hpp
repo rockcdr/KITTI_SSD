@@ -8,7 +8,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Takes a Blob and crop it, to the shape specified by the second input
@@ -62,6 +62,6 @@ class CropLayer : public Layer<Dtype> {
                 Dtype* dest_data,
                 bool is_forward);
 };
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_CROP_LAYER_HPP_

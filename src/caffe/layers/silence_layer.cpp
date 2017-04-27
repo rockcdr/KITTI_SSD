@@ -3,7 +3,7 @@
 #include "caffe/layers/silence_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void SilenceLayer<Dtype>::Backward_cpu(const vector<Blob<Dtype>*>& top,
@@ -23,4 +23,4 @@ STUB_GPU(SilenceLayer);
 INSTANTIATE_CLASS(SilenceLayer);
 REGISTER_LAYER_CLASS(Silence);
 
-}  // namespace caffe
+}  // namespace caffe9

@@ -3,7 +3,7 @@
 #include "caffe/layers/slice_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 __global__ void Slice(const int nthreads, const Dtype* in_data,
@@ -68,4 +68,4 @@ void SliceLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 
 INSTANTIATE_LAYER_GPU_FUNCS(SliceLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

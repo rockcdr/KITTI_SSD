@@ -24,6 +24,7 @@ caffe_default_properties(caffe)
 set_target_properties(caffe PROPERTIES
     VERSION   ${CAFFE_TARGET_VERSION}
     SOVERSION ${CAFFE_TARGET_SOVERSION}
+    OUTPUT_NAME caffe9.so.1.0.0-rc3
     )
 
 # ---[ Tests
@@ -36,6 +37,6 @@ install(TARGETS caffe proto EXPORT CaffeTargets DESTINATION lib)
 
 file(WRITE ${PROJECT_BINARY_DIR}/__init__.py)
 list(APPEND proto_python ${PROJECT_BINARY_DIR}/__init__.py)
-install(PROGRAMS ${proto_python} DESTINATION python/caffe/proto)
+install(PROGRAMS ${proto_python} DESTINATION python/caffe9/proto)
 
 

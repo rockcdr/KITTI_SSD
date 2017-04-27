@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /*
  * @brief Reshapes the input Blob into an arbitrary-sized output Blob.
@@ -47,6 +47,6 @@ class ReshapeLayer : public Layer<Dtype> {
   int constant_count_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_XXX_LAYER_HPP_

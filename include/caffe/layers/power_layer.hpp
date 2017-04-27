@@ -9,7 +9,7 @@
 
 #include "caffe/layers/neuron_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Computes @f$ y = (\alpha x + \beta) ^ \gamma @f$,
@@ -84,6 +84,6 @@ class PowerLayer : public NeuronLayer<Dtype> {
   Dtype diff_scale_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_POWER_LAYER_HPP_

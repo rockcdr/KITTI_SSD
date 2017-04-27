@@ -2,7 +2,7 @@
 #include "caffe/syncedmem.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 SyncedMemory::~SyncedMemory() {
   if (cpu_ptr_ && own_cpu_data_) {
@@ -153,5 +153,5 @@ void SyncedMemory::async_gpu_push(const cudaStream_t& stream) {
 }
 #endif
 
-}  // namespace caffe
+}  // namespace caffe9
 

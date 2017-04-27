@@ -10,7 +10,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 #define HDF5_DATA_DATASET_NAME "data"
 #define HDF5_DATA_LABEL_NAME "label"
@@ -59,6 +59,6 @@ class HDF5OutputLayer : public Layer<Dtype> {
   Blob<Dtype> label_blob_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_HDF5_OUTPUT_LAYER_HPP_

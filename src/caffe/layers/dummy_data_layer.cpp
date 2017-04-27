@@ -3,7 +3,7 @@
 #include "caffe/filler.hpp"
 #include "caffe/layers/dummy_data_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void DummyDataLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -111,4 +111,4 @@ void DummyDataLayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom,
 INSTANTIATE_CLASS(DummyDataLayer);
 REGISTER_LAYER_CLASS(DummyData);
 
-}  // namespace caffe
+}  // namespace caffe9

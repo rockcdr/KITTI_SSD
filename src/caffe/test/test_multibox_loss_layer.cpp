@@ -28,7 +28,7 @@
 
 using boost::scoped_ptr;
 
-namespace caffe {
+namespace caffe9 {
 
 static bool kBoolChoices[] = {true, false};
 static MultiBoxLossParameter_LocLossType kLocLossTypes[] = {
@@ -139,7 +139,7 @@ class MultiBoxLossLayerTest : public MultiDeviceTest<TypeParam> {
         bbox->set_ymax(0.9);
         bbox->set_difficult((i + 1) % 2);
       }
-      string key_str = caffe::format_int(i, 3);
+      string key_str = caffe9::format_int(i, 3);
       string out;
       CHECK(anno_datum.SerializeToString(&out));
       txn->Put(key_str, out);
@@ -406,4 +406,4 @@ TYPED_TEST(MultiBoxLossLayerTest, TestConfGradient) {
   }
 }
 
-}  // namespace caffe
+}  // namespace caffe9

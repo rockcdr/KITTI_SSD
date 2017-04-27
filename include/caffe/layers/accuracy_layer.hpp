@@ -9,7 +9,7 @@
 
 #include "caffe/layers/loss_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Computes the classification accuracy for a one-of-many
@@ -90,6 +90,6 @@ class AccuracyLayer : public Layer<Dtype> {
   Blob<Dtype> nums_buffer_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_ACCURACY_LAYER_HPP_

@@ -4,7 +4,7 @@
 #include "caffe/layers/slice_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void SliceLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -121,4 +121,4 @@ STUB_GPU(SliceLayer);
 INSTANTIATE_CLASS(SliceLayer);
 REGISTER_LAYER_CLASS(Slice);
 
-}  // namespace caffe
+}  // namespace caffe9

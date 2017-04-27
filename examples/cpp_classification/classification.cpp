@@ -12,7 +12,7 @@
 #include <vector>
 
 #ifdef USE_OPENCV
-using namespace caffe;  // NOLINT(build/namespaces)
+using namespace caffe9;  // NOLINT(build/namespaces)
 using std::string;
 
 /* Pair (label, confidence) representing a prediction. */

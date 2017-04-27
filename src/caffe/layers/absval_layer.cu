@@ -3,7 +3,7 @@
 #include "caffe/layers/absval_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void AbsValLayer<Dtype>::Forward_gpu(
@@ -29,4 +29,4 @@ void AbsValLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 INSTANTIATE_LAYER_GPU_FUNCS(AbsValLayer);
 
 
-}  // namespace caffe
+}  // namespace caffe9

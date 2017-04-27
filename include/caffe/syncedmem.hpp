@@ -5,7 +5,7 @@
 
 #include "caffe/common.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 // If CUDA is available and in GPU mode, host memory will be allocated pinned,
 // using cudaMallocHost. It avoids dynamic pinning for transfers (DMA).
@@ -82,6 +82,6 @@ class SyncedMemory {
   DISABLE_COPY_AND_ASSIGN(SyncedMemory);
 };  // class SyncedMemory
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_SYNCEDMEM_HPP_

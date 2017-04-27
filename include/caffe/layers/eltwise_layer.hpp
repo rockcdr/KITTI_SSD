@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Compute elementwise operations, such as product and sum,
@@ -46,6 +46,6 @@ class EltwiseLayer : public Layer<Dtype> {
   bool stable_prod_grad_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_ELTWISE_LAYER_HPP_

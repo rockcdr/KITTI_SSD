@@ -9,7 +9,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 class SyncedMemoryTest : public ::testing::Test {};
 
@@ -122,4 +122,4 @@ TEST_F(SyncedMemoryTest, TestGPUWrite) {
 
 #endif
 
-}  // namespace caffe
+}  // namespace caffe9

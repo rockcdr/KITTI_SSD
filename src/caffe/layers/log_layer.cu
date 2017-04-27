@@ -3,7 +3,7 @@
 #include "caffe/layers/log_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void LogLayer<Dtype>::Forward_gpu(const vector<Blob<Dtype>*>& bottom,
@@ -52,4 +52,4 @@ void LogLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 
 INSTANTIATE_LAYER_GPU_FUNCS(LogLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

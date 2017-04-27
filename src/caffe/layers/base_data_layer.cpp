@@ -9,7 +9,7 @@
 #include "caffe/proto/caffe.pb.h"
 #include "caffe/util/blocking_queue.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 BaseDataLayer<Dtype>::BaseDataLayer(const LayerParameter& param)
@@ -131,4 +131,4 @@ STUB_GPU_FORWARD(BasePrefetchingDataLayer, Forward);
 INSTANTIATE_CLASS(BaseDataLayer);
 INSTANTIATE_CLASS(BasePrefetchingDataLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

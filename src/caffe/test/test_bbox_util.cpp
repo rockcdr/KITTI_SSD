@@ -9,7 +9,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 static const float eps = 1e-6;
 
@@ -1810,4 +1810,4 @@ TYPED_TEST(GPUBBoxUtilTest, TestComputeOverlappedMultiClass) {
 
 #endif
 
-}  // namespace caffe
+}  // namespace caffe9

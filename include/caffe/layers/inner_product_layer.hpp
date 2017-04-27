@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Also known as a "fully-connected" layer, computes an inner product
@@ -47,6 +47,6 @@ class InnerProductLayer : public Layer<Dtype> {
   bool transpose_;  ///< if true, assume transposed weights
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_INNER_PRODUCT_LAYER_HPP_

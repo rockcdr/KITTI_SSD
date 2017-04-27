@@ -3,7 +3,7 @@
 #include "caffe/layers/dropout_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 __global__ void DropoutForward(const int n, const Dtype* in,
@@ -67,4 +67,4 @@ void DropoutLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 
 INSTANTIATE_LAYER_GPU_FUNCS(DropoutLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

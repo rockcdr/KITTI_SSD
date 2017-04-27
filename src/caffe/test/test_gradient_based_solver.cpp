@@ -17,7 +17,7 @@
 
 using std::ostringstream;
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename TypeParam>
 class GradientBasedSolverTest : public MultiDeviceTest<TypeParam> {
@@ -1262,4 +1262,4 @@ TYPED_TEST(RMSPropSolverTest, TestSnapshotShare) {
   }
 }
 
-}  // namespace caffe
+}  // namespace caffe9

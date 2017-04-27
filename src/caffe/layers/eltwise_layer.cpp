@@ -4,7 +4,7 @@
 #include "caffe/layers/eltwise_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void EltwiseLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -157,4 +157,4 @@ STUB_GPU(EltwiseLayer);
 INSTANTIATE_CLASS(EltwiseLayer);
 REGISTER_LAYER_CLASS(Eltwise);
 
-}  // namespace caffe
+}  // namespace caffe9

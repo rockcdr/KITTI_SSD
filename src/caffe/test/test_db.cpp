@@ -11,7 +11,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 using boost::scoped_ptr;
 
@@ -132,5 +132,5 @@ TYPED_TEST(DBTest, TestWrite) {
   txn->Commit();
 }
 
-}  // namespace caffe
+}  // namespace caffe9
 #endif  // USE_LEVELDB, USE_LMDB and USE_OPENCV

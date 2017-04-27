@@ -10,7 +10,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 class ArgMaxLayerTest : public CPUDeviceTest<Dtype> {
@@ -292,4 +292,4 @@ TYPED_TEST(ArgMaxLayerTest, TestCPUAxisMaxValTopK) {
   }
 }
 
-}  // namespace caffe
+}  // namespace caffe9

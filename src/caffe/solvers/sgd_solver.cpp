@@ -6,7 +6,7 @@
 #include "caffe/util/io.hpp"
 #include "caffe/util/upgrade_proto.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 // Return the current learning rate. The currently implemented learning rate
 // policies are as follows:
@@ -245,10 +245,10 @@ void SGDSolver<Dtype>::ComputeUpdateValue(int param_id, Dtype rate) {
 template <typename Dtype>
 void SGDSolver<Dtype>::SnapshotSolverState(const string& model_filename) {
   switch (this->param_.snapshot_format()) {
-    case caffe::SolverParameter_SnapshotFormat_BINARYPROTO:
+    case caffe9::SolverParameter_SnapshotFormat_BINARYPROTO:
       SnapshotSolverStateToBinaryProto(model_filename);
       break;
-    case caffe::SolverParameter_SnapshotFormat_HDF5:
+    case caffe9::SolverParameter_SnapshotFormat_HDF5:
       SnapshotSolverStateToHDF5(model_filename);
       break;
     default:
@@ -349,4 +349,4 @@ void SGDSolver<Dtype>::RestoreSolverStateFromHDF5(const string& state_file) {
 INSTANTIATE_CLASS(SGDSolver);
 REGISTER_SOLVER_CLASS(SGD);
 
-}  // namespace caffe
+}  // namespace caffe9

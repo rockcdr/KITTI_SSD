@@ -3,7 +3,7 @@
 #include "caffe/layers/power_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void PowerLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -99,4 +99,4 @@ STUB_GPU(PowerLayer);
 INSTANTIATE_CLASS(PowerLayer);
 REGISTER_LAYER_CLASS(Power);
 
-}  // namespace caffe
+}  // namespace caffe9

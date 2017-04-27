@@ -10,7 +10,7 @@
 #include "caffe/common.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 // Generate random number given the probablities for each number.
 int roll_weighted_die(const std::vector<float>& probabilities);
@@ -49,7 +49,7 @@ cv::Mat ApplyResize(const cv::Mat& in_img, const ResizeParameter& param);
 
 cv::Mat ApplyNoise(const cv::Mat& in_img, const NoiseParameter& param);
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // IM_TRANSFORMS_HPP
 #endif  // USE_OPENCV

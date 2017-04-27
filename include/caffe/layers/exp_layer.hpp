@@ -9,7 +9,7 @@
 
 #include "caffe/layers/neuron_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Computes @f$ y = \gamma ^ {\alpha x + \beta} @f$,
@@ -75,6 +75,6 @@ class ExpLayer : public NeuronLayer<Dtype> {
   Dtype inner_scale_, outer_scale_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_EXP_LAYER_HPP_

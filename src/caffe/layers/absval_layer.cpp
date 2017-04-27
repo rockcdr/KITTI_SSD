@@ -3,7 +3,7 @@
 #include "caffe/layers/absval_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void AbsValLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -41,4 +41,4 @@ STUB_GPU(AbsValLayer);
 INSTANTIATE_CLASS(AbsValLayer);
 REGISTER_LAYER_CLASS(AbsVal);
 
-}  // namespace caffe
+}  // namespace caffe9

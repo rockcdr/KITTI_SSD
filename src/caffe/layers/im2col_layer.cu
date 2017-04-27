@@ -3,7 +3,7 @@
 #include "caffe/layers/im2col_layer.hpp"
 #include "caffe/util/im2col.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void Im2colLayer<Dtype>::Forward_gpu(const vector<Blob<Dtype>*>& bottom,
@@ -59,4 +59,4 @@ void Im2colLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 
 INSTANTIATE_LAYER_GPU_FUNCS(Im2colLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

@@ -15,15 +15,15 @@ namespace bp = boost::python;
 #include "caffe/caffe.hpp"
 #include "caffe/util/signal_handler.h"
 
-using caffe::Blob;
-using caffe::Caffe;
-using caffe::Net;
-using caffe::Layer;
-using caffe::Solver;
-using caffe::shared_ptr;
-using caffe::string;
-using caffe::Timer;
-using caffe::vector;
+using caffe9::Blob;
+using caffe9::Caffe;
+using caffe9::Net;
+using caffe9::Layer;
+using caffe9::Solver;
+using caffe9::shared_ptr;
+using caffe9::string;
+using caffe9::Timer;
+using caffe9::vector;
 using std::ostringstream;
 
 DEFINE_string(gpu, "",
@@ -50,7 +50,7 @@ DEFINE_string(sighup_effect, "snapshot",
 
 // A simple registry for caffe commands.
 typedef int (*BrewFunction)();
-typedef std::map<caffe::string, BrewFunction> BrewMap;
+typedef std::map<caffe9::string, BrewFunction> BrewMap;
 BrewMap g_brew_map;
 
 #define RegisterBrewFunction(func) \
@@ -64,7 +64,7 @@ class __Registerer_##func { \
 __Registerer_##func g_registerer_##func; \
 }
 
-static BrewFunction GetBrewFunction(const caffe::string& name) {
+static BrewFunction GetBrewFunction(const caffe9::string& name) {
   if (g_brew_map.count(name)) {
     return g_brew_map[name];
   } else {
@@ -113,8 +113,8 @@ int device_query() {
   vector<int> gpus;
   get_gpus(&gpus);
   for (int i = 0; i < gpus.size(); ++i) {
-    caffe::Caffe::SetDevice(gpus[i]);
-    caffe::Caffe::DeviceQuery();
+    caffe9::Caffe::SetDevice(gpus[i]);
+    caffe9::Caffe::DeviceQuery();
   }
   return 0;
 }
@@ -122,7 +122,7 @@ RegisterBrewFunction(device_query);
 
 // Load the weights from the specified caffemodel(s) into the train and
 // test nets.
-void CopyLayers(caffe::Solver<float>* solver, const std::string& model_list) {
+void CopyLayers(caffe9::Solver<float>* solver, const std::string& model_list) {
   std::vector<std::string> model_names;
   boost::split(model_names, model_list, boost::is_any_of(",") );
   for (int i = 0; i < model_names.size(); ++i) {
@@ -136,16 +136,16 @@ void CopyLayers(caffe::Solver<float>* solver, const std::string& model_list) {
 
 // Translate the signal effect the user specified on the command-line to the
 // corresponding enumeration.
-caffe::SolverAction::Enum GetRequestedAction(
+caffe9::SolverAction::Enum GetRequestedAction(
     const std::string& flag_value) {
   if (flag_value == "stop") {
-    return caffe::SolverAction::STOP;
+    return caffe9::SolverAction::STOP;
   }
   if (flag_value == "snapshot") {
-    return caffe::SolverAction::SNAPSHOT;
+    return caffe9::SolverAction::SNAPSHOT;
   }
   if (flag_value == "none") {
-    return caffe::SolverAction::NONE;
+    return caffe9::SolverAction::NONE;
   }
   LOG(FATAL) << "Invalid signal effect \""<< flag_value << "\" was specified";
 }
@@ -157,13 +157,13 @@ int train() {
       << "Give a snapshot to resume training or weights to finetune "
       "but not both.";
 
-  caffe::SolverParameter solver_param;
-  caffe::ReadSolverParamsFromTextFileOrDie(FLAGS_solver, &solver_param);
+  caffe9::SolverParameter solver_param;
+  caffe9::ReadSolverParamsFromTextFileOrDie(FLAGS_solver, &solver_param);
 
   // If the gpus flag is not provided, allow the mode and device to be set
   // in the solver prototxt.
   if (FLAGS_gpu.size() == 0
-      && solver_param.solver_mode() == caffe::SolverParameter_SolverMode_GPU) {
+      && solver_param.solver_mode() == caffe9::SolverParameter_SolverMode_GPU) {
       if (solver_param.has_device_id()) {
           FLAGS_gpu = "" +
               boost::lexical_cast<string>(solver_param.device_id());
@@ -196,12 +196,12 @@ int train() {
     Caffe::set_solver_count(gpus.size());
   }
 
-  caffe::SignalHandler signal_handler(
+  caffe9::SignalHandler signal_handler(
         GetRequestedAction(FLAGS_sigint_effect),
         GetRequestedAction(FLAGS_sighup_effect));
 
-  shared_ptr<caffe::Solver<float> >
-      solver(caffe::SolverRegistry<float>::CreateSolver(solver_param));
+  shared_ptr<caffe9::Solver<float> >
+      solver(caffe9::SolverRegistry<float>::CreateSolver(solver_param));
 
   solver->SetActionFunction(signal_handler.GetActionFunction());
 
@@ -213,7 +213,7 @@ int train() {
   }
 
   if (gpus.size() > 1) {
-    caffe::P2PSync<float> sync(solver, NULL, solver->param());
+    caffe9::P2PSync<float> sync(solver, NULL, solver->param());
     sync.Run(gpus);
   } else {
     LOG(INFO) << "Starting Optimization";
@@ -247,7 +247,7 @@ int test() {
     Caffe::set_mode(Caffe::CPU);
   }
   // Instantiate the caffe net.
-  Net<float> caffe_net(FLAGS_model, caffe::TEST);
+  Net<float> caffe_net(FLAGS_model, caffe9::TEST);
   caffe_net.CopyTrainedLayersFrom(FLAGS_weights);
   LOG(INFO) << "Running for " << FLAGS_iterations << " iterations.";
 
@@ -313,7 +313,7 @@ int time() {
     Caffe::set_mode(Caffe::CPU);
   }
   // Instantiate the caffe net.
-  Net<float> caffe_net(FLAGS_model, caffe::TRAIN);
+  Net<float> caffe_net(FLAGS_model, caffe9::TRAIN);
 
   // Do a clean forward and backward pass, so that memory allocation are done
   // and future iterations will be more stable.
@@ -365,7 +365,7 @@ int time() {
   }
   LOG(INFO) << "Average time per layer: ";
   for (int i = 0; i < layers.size(); ++i) {
-    const caffe::string& layername = layers[i]->layer_param().name();
+    const caffe9::string& layername = layers[i]->layer_param().name();
     LOG(INFO) << std::setfill(' ') << std::setw(10) << layername <<
       "\tforward: " << forward_time_per_layer[i] / 1000 /
       FLAGS_iterations << " ms.";
@@ -400,12 +400,12 @@ int main(int argc, char** argv) {
       "  device_query    show GPU diagnostic information\n"
       "  time            benchmark model execution time");
   // Run tool or show usage.
-  caffe::GlobalInit(&argc, &argv);
+  caffe9::GlobalInit(&argc, &argv);
   if (argc == 2) {
 #ifdef WITH_PYTHON_LAYER
     try {
 #endif
-      return GetBrewFunction(caffe::string(argv[1]))();
+      return GetBrewFunction(caffe9::string(argv[1]))();
 #ifdef WITH_PYTHON_LAYER
     } catch (bp::error_already_set) {
       PyErr_Print();

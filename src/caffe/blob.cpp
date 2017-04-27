@@ -6,7 +6,7 @@
 #include "caffe/syncedmem.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void Blob<Dtype>::Reshape(const int num, const int channels, const int height,
@@ -567,5 +567,5 @@ template class Blob<bool>;
 template class Blob<int>;
 template class Blob<unsigned int>;
 
-}  // namespace caffe
+}  // namespace caffe9
 

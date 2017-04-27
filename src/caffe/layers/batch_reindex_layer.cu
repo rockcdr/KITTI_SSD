@@ -5,7 +5,7 @@
 #include "caffe/layers/batch_reindex_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template<typename Dtype>
 __global__ void BRForward(const int count, const int inner_dim, const Dtype* in,
@@ -103,4 +103,4 @@ void BatchReindexLayer<Dtype>::Backward_gpu(
 
 INSTANTIATE_LAYER_GPU_FUNCS(BatchReindexLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

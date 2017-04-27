@@ -1,7 +1,7 @@
 #include "caffe/util/math_functions.hpp"
 
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 __global__ void AdamUpdate(int N, Dtype* g, Dtype* m, Dtype* v,
@@ -26,4 +26,4 @@ template void adam_update_gpu<float>(int, float*, float*, float*,
 template void adam_update_gpu<double>(int, double*, double*, double*,
     double, double, double, double);
 
-}  // namespace caffe
+}  // namespace caffe9

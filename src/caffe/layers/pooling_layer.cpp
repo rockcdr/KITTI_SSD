@@ -5,7 +5,7 @@
 #include "caffe/layers/pooling_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 using std::min;
 using std::max;
@@ -313,4 +313,4 @@ STUB_GPU(PoolingLayer);
 
 INSTANTIATE_CLASS(PoolingLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

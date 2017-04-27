@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Generate the prior boxes of designated sizes and aspect ratios across
@@ -71,6 +71,6 @@ class PriorBoxLayer : public Layer<Dtype> {
   vector<float> variance_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_PRIORBOX_LAYER_HPP_

@@ -6,7 +6,7 @@
 #include "caffe/layers/neuron_layer.hpp"
 #include "caffe/layers/prelu_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void PReLULayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -138,4 +138,4 @@ STUB_GPU(PReLULayer);
 INSTANTIATE_CLASS(PReLULayer);
 REGISTER_LAYER_CLASS(PReLU);
 
-}  // namespace caffe
+}  // namespace caffe9

@@ -4,7 +4,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 class ConstantFillerTest : public ::testing::Test {
@@ -238,4 +238,4 @@ TYPED_TEST(MSRAFillerTest, TestFillAverage) {
   this->test_params(FillerParameter_VarianceNorm_AVERAGE, n);
 }
 
-}  // namespace caffe
+}  // namespace caffe9

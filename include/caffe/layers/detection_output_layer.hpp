@@ -18,7 +18,7 @@
 
 using namespace boost::property_tree;  // NOLINT(build/namespaces)
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Generate the detection output based on location and confidence
@@ -106,6 +106,6 @@ class DetectionOutputLayer : public Layer<Dtype> {
   shared_ptr<DataTransformer<Dtype> > data_transformer_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_DETECTION_OUTPUT_LAYER_HPP_

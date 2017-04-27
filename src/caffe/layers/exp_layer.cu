@@ -3,7 +3,7 @@
 #include "caffe/layers/exp_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void ExpLayer<Dtype>::Forward_gpu(const vector<Blob<Dtype>*>& bottom,
@@ -39,4 +39,4 @@ void ExpLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 INSTANTIATE_LAYER_GPU_FUNCS(ExpLayer);
 
 
-}  // namespace caffe
+}  // namespace caffe9

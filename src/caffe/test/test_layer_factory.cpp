@@ -12,7 +12,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename TypeParam>
 class LayerFactoryTest : public MultiDeviceTest<TypeParam> {};
@@ -48,4 +48,4 @@ TYPED_TEST(LayerFactoryTest, TestCreateLayer) {
   }
 }
 
-}  // namespace caffe
+}  // namespace caffe9

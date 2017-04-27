@@ -3,7 +3,7 @@
 #include "caffe/layers/mvn_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void MVNLayer<Dtype>::Reshape(const vector<Blob<Dtype>*>& bottom,
@@ -131,4 +131,4 @@ STUB_GPU(MVNLayer);
 INSTANTIATE_CLASS(MVNLayer);
 REGISTER_LAYER_CLASS(MVN);
 
-}  // namespace caffe
+}  // namespace caffe9

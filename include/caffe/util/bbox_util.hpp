@@ -18,7 +18,7 @@
 
 #include "caffe/caffe.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 typedef EmitConstraint_EmitType EmitType;
 typedef PriorBoxParameter_CodeType CodeType;
@@ -282,6 +282,6 @@ void VisualizeBBox(const vector<cv::Mat>& images, const Blob<Dtype>* detections,
                    const map<int, string>& label_to_display_name);
 #endif  // USE_OPENCV
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_UTIL_BBOX_UTIL_H_

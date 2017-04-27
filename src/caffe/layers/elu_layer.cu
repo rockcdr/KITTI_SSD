@@ -3,7 +3,7 @@
 
 #include "caffe/layers/elu_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 __global__ void ELUForward(const int n, const Dtype* in, Dtype* out,
@@ -59,4 +59,4 @@ void ELULayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 INSTANTIATE_LAYER_GPU_FUNCS(ELULayer);
 
 
-}  // namespace caffe
+}  // namespace caffe9

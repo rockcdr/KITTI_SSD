@@ -10,7 +10,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 // Forward declare kernel functions
 template <typename Dtype>
@@ -210,4 +210,4 @@ TYPED_TEST(Im2colKernelTest, TestND) {
   }
 }
 
-}  // namespace caffe
+}  // namespace caffe9

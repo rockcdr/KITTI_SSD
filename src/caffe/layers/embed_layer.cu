@@ -5,7 +5,7 @@
 #include "caffe/util/gpu_util.cuh"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 __global__ void EmbedForward(const int nthreads, const Dtype* bottom_data,
@@ -78,4 +78,4 @@ void EmbedLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 
 INSTANTIATE_LAYER_GPU_FUNCS(EmbedLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

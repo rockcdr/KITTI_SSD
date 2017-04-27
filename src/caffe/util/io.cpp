@@ -29,7 +29,7 @@
 
 const int kProtoReadBytesLimit = INT_MAX;  // Max size of 2 GB minus 1 byte.
 
-namespace caffe {
+namespace caffe9 {
 
 using namespace boost::property_tree;  // NOLINT(build/namespaces)
 using google::protobuf::io::FileInputStream;
@@ -655,4 +655,4 @@ void CVMatToDatum(const cv::Mat& cv_img, Datum* datum) {
   datum->set_data(buffer);
 }
 #endif  // USE_OPENCV
-}  // namespace caffe
+}  // namespace caffe9

@@ -13,7 +13,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 static const float eps = 1e-6;
 
@@ -200,4 +200,4 @@ TYPED_TEST(DetectionEvaluateLayerTest, TestForwardSkipDifficult) {
   this->CheckEqual(*(this->blob_top_), 9, "2 1 0.2 0 1");
 }
 
-}  // namespace caffe
+}  // namespace caffe9

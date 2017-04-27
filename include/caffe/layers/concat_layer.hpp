@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Takes at least two Blob%s and concatenates them along either the num
@@ -82,6 +82,6 @@ class ConcatLayer : public Layer<Dtype> {
   int concat_axis_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_CONCAT_LAYER_HPP_

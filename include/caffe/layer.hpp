@@ -17,7 +17,7 @@
  */
 namespace boost { class mutex; }
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief An interface for the units of computation which can be composed into a
@@ -513,6 +513,6 @@ void Layer<Dtype>::ToProto(LayerParameter* param, bool write_diff) {
   }
 }
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_LAYER_H_

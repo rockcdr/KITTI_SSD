@@ -2,7 +2,7 @@
 
 #include "caffe/layers/flatten_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void FlattenLayer<Dtype>::Reshape(const vector<Blob<Dtype>*>& bottom,
@@ -41,4 +41,4 @@ void FlattenLayer<Dtype>::Backward_cpu(const vector<Blob<Dtype>*>& top,
 INSTANTIATE_CLASS(FlattenLayer);
 REGISTER_LAYER_CLASS(Flatten);
 
-}  // namespace caffe
+}  // namespace caffe9

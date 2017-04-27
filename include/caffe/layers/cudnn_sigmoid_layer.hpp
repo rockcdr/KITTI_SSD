@@ -10,7 +10,7 @@
 #include "caffe/layers/neuron_layer.hpp"
 #include "caffe/layers/sigmoid_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 #ifdef USE_CUDNN
 /**
@@ -40,6 +40,6 @@ class CuDNNSigmoidLayer : public SigmoidLayer<Dtype> {
 };
 #endif
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_CUDNN_SIGMOID_LAYER_HPP_

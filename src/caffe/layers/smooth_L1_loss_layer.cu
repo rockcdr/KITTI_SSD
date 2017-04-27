@@ -11,7 +11,7 @@
 #include "caffe/layers/smooth_L1_loss_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 __global__ void SmoothL1Forward(const int n, const Dtype* in, Dtype* out) {
@@ -93,4 +93,4 @@ void SmoothL1LossLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 
 INSTANTIATE_LAYER_GPU_FUNCS(SmoothL1LossLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

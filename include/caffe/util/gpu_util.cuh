@@ -1,7 +1,7 @@
 #ifndef CAFFE_UTIL_GPU_UTIL_H_
 #define CAFFE_UTIL_GPU_UTIL_H_
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 inline __device__ Dtype caffe_gpu_atomic_add(const Dtype val, Dtype* address);
@@ -30,6 +30,6 @@ double caffe_gpu_atomic_add(const double val, double* address) {
   return __longlong_as_double(old);
 }
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_UTIL_GPU_UTIL_H_

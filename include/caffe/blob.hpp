@@ -11,7 +11,7 @@
 
 const int kMaxBlobAxes = 32;
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief A wrapper around SyncedMemory holders serving as the basic
@@ -276,6 +276,6 @@ class Blob {
   DISABLE_COPY_AND_ASSIGN(Blob);
 };  // class Blob
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_BLOB_HPP_

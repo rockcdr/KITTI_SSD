@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief An interface for layers that take one blob as input (@f$ x @f$)
@@ -27,6 +27,6 @@ class NeuronLayer : public Layer<Dtype> {
   virtual inline int ExactNumTopBlobs() const { return 1; }
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_NEURON_LAYER_HPP_

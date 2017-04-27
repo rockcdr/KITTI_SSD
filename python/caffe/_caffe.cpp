@@ -28,7 +28,7 @@
 
 namespace bp = boost::python;
 
-namespace caffe {
+namespace caffe9 {
 
 // For Python, for now, we'll just always use float as the type.
 typedef float Dtype;
@@ -209,7 +209,7 @@ bp::object BlobVec_add_blob(bp::tuple args, bp::dict kwargs) {
 
 BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS(SolveOverloads, Solve, 0, 1);
 
-BOOST_PYTHON_MODULE(_caffe) {
+BOOST_PYTHON_MODULE(_caffe9) {
   // below, we prepend an underscore to methods that will be replaced
   // in Python
 
@@ -379,4 +379,4 @@ BOOST_PYTHON_MODULE(_caffe) {
   import_array1();
 }
 
-}  // namespace caffe
+}  // namespace caffe9

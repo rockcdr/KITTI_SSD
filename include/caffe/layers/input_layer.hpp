@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Provides data to the Net by assigning tops directly.
@@ -39,6 +39,6 @@ class InputLayer : public Layer<Dtype> {
       const vector<bool>& propagate_down, const vector<Blob<Dtype>*>& bottom) {}
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_INPUT_LAYER_HPP_

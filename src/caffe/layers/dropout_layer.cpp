@@ -5,7 +5,7 @@
 #include "caffe/layers/dropout_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void DropoutLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -72,4 +72,4 @@ STUB_GPU(DropoutLayer);
 INSTANTIATE_CLASS(DropoutLayer);
 REGISTER_LAYER_CLASS(Dropout);
 
-}  // namespace caffe
+}  // namespace caffe9

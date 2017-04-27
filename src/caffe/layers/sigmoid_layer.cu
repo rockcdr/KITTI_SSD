@@ -3,7 +3,7 @@
 
 #include "caffe/layers/sigmoid_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 __global__ void SigmoidForward(const int n, const Dtype* in, Dtype* out) {
@@ -57,4 +57,4 @@ void SigmoidLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 INSTANTIATE_LAYER_GPU_FUNCS(SigmoidLayer);
 
 
-}  // namespace caffe
+}  // namespace caffe9

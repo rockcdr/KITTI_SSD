@@ -4,7 +4,7 @@
 #include "caffe/proto/caffe.pb.h"
 #include "caffe/solver.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 class SignalHandler {
  public:
@@ -19,6 +19,6 @@ class SignalHandler {
   SolverAction::Enum SIGHUP_action_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // INCLUDE_CAFFE_UTIL_SIGNAL_HANDLER_H_

@@ -6,7 +6,7 @@
 #include "caffe/util/im2col.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void BaseConvolutionLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -393,4 +393,4 @@ void BaseConvolutionLayer<Dtype>::backward_gpu_bias(Dtype* bias,
 
 INSTANTIATE_CLASS(BaseConvolutionLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

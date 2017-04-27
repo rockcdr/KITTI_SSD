@@ -1,7 +1,7 @@
 #ifndef _CAFFE_UTIL_IM2COL_HPP_
 #define _CAFFE_UTIL_IM2COL_HPP_
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void im2col_nd_cpu(const Dtype* data_im, const int num_spatial_axes,
@@ -55,6 +55,6 @@ void col2im_gpu(const Dtype* data_col, const int channels,
     const int stride_w, const int dilation_h, const int dilation_w,
     Dtype* data_im);
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_UTIL_IM2COL_HPP_

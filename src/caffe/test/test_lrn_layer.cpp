@@ -19,7 +19,7 @@
 using std::min;
 using std::max;
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename TypeParam>
 class LRNLayerTest : public MultiDeviceTest<TypeParam> {
@@ -447,4 +447,4 @@ TYPED_TEST(CuDNNLRNLayerTest, TestGradientAcrossChannelsLargeRegionCuDNN) {
 
 #endif
 
-}  // namespace caffe
+}  // namespace caffe9

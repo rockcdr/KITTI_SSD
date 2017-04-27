@@ -27,7 +27,7 @@
 #include "caffe/proto/caffe.pb.h"
 #include "caffe/util/io.hpp"
 
-using namespace caffe;  // NOLINT(build/namespaces)
+using namespace caffe9;  // NOLINT(build/namespaces)
 
 DEFINE_bool(include_background, false,
     "When this option is on, include none_of_the_above as class 0.");

@@ -6,7 +6,7 @@
 #include "caffe/layers/hdf5_output_layer.hpp"
 #include "caffe/util/hdf5.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void HDF5OutputLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -71,4 +71,4 @@ STUB_GPU(HDF5OutputLayer);
 INSTANTIATE_CLASS(HDF5OutputLayer);
 REGISTER_LAYER_CLASS(HDF5Output);
 
-}  // namespace caffe
+}  // namespace caffe9

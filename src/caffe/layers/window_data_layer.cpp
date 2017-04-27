@@ -25,7 +25,7 @@
 //   'source' field specifies the window_file
 //   'crop_size' indicates the desired warped size
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 WindowDataLayer<Dtype>::~WindowDataLayer<Dtype>() {
@@ -218,8 +218,8 @@ void WindowDataLayer<Dtype>::DataLayerSetUp(const vector<Blob<Dtype>*>& bottom,
 template <typename Dtype>
 unsigned int WindowDataLayer<Dtype>::PrefetchRand() {
   CHECK(prefetch_rng_);
-  caffe::rng_t* prefetch_rng =
-      static_cast<caffe::rng_t*>(prefetch_rng_->generator());
+  caffe9::rng_t* prefetch_rng =
+      static_cast<caffe9::rng_t*>(prefetch_rng_->generator());
   return (*prefetch_rng)();
 }
 
@@ -469,5 +469,5 @@ void WindowDataLayer<Dtype>::load_batch(Batch<Dtype>* batch) {
 INSTANTIATE_CLASS(WindowDataLayer);
 REGISTER_LAYER_CLASS(WindowData);
 
-}  // namespace caffe
+}  // namespace caffe9
 #endif  // USE_OPENCV

@@ -3,7 +3,7 @@
 #include "caffe/layers/log_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void LogLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -82,4 +82,4 @@ STUB_GPU(LogLayer);
 INSTANTIATE_CLASS(LogLayer);
 REGISTER_LAYER_CLASS(Log);
 
-}  // namespace caffe
+}  // namespace caffe9

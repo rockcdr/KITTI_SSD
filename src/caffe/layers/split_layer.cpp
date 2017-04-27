@@ -3,7 +3,7 @@
 #include "caffe/layers/split_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void SplitLayer<Dtype>::Reshape(const vector<Blob<Dtype>*>& bottom,
@@ -56,4 +56,4 @@ STUB_GPU(SplitLayer);
 INSTANTIATE_CLASS(SplitLayer);
 REGISTER_LAYER_CLASS(Split);
 
-}  // namespace caffe
+}  // namespace caffe9

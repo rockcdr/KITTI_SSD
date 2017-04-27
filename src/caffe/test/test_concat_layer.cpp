@@ -10,7 +10,7 @@
 #include "caffe/test/test_caffe_main.hpp"
 #include "caffe/test/test_gradient_check_util.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename TypeParam>
 class ConcatLayerTest : public MultiDeviceTest<TypeParam> {
@@ -204,4 +204,4 @@ TYPED_TEST(ConcatLayerTest, TestGradientChannelsBottomOneOnly) {
     this->blob_top_vec_, 1);
 }
 
-}  // namespace caffe
+}  // namespace caffe9

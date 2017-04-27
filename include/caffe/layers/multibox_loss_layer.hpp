@@ -12,7 +12,7 @@
 
 #include "caffe/layers/loss_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Perform MultiBox operations. Including the following:
@@ -103,6 +103,6 @@ class MultiBoxLossLayer : public LossLayer<Dtype> {
   LossParameter_NormalizationMode normalization_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_MULTIBOX_LOSS_LAYER_HPP_

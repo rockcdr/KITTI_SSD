@@ -9,7 +9,7 @@
 
 #include "caffe/layers/base_conv_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Convolve the input with a bank of learned filters, and (optionally)
@@ -46,6 +46,6 @@ class DeconvolutionLayer : public BaseConvolutionLayer<Dtype> {
   virtual void compute_output_shape();
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_DECONV_LAYER_HPP_

@@ -4,7 +4,7 @@
 #include <queue>
 #include <string>
 
-namespace caffe {
+namespace caffe9 {
 
 template<typename T>
 class BlockingQueue {
@@ -40,6 +40,6 @@ class BlockingQueue {
 DISABLE_COPY_AND_ASSIGN(BlockingQueue);
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif

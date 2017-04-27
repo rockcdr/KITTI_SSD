@@ -19,7 +19,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 Net<Dtype>::Net(const NetParameter& param, const Net* root_net)
@@ -987,4 +987,4 @@ const shared_ptr<Layer<Dtype> > Net<Dtype>::layer_by_name(
 
 INSTANTIATE_CLASS(Net);
 
-}  // namespace caffe
+}  // namespace caffe9

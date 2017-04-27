@@ -9,7 +9,7 @@
 
 #include "caffe/layers/neuron_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief TanH hyperbolic tangent non-linearity @f$
@@ -68,6 +68,6 @@ class TanHLayer : public NeuronLayer<Dtype> {
       const vector<bool>& propagate_down, const vector<Blob<Dtype>*>& bottom);
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_TANH_LAYER_HPP_

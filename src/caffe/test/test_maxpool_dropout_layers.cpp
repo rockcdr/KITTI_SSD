@@ -11,7 +11,7 @@
 #include "caffe/test/test_caffe_main.hpp"
 #include "caffe/test/test_gradient_check_util.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename TypeParam>
 class MaxPoolingDropoutTest : public MultiDeviceTest<TypeParam> {
@@ -124,4 +124,4 @@ TYPED_TEST(MaxPoolingDropoutTest, TestBackward) {
   EXPECT_GE(sum_with_dropout, sum);
 }
 
-}  // namespace caffe
+}  // namespace caffe9

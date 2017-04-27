@@ -4,7 +4,7 @@
 
 #include "caffe/layers/cudnn_conv_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 // Set to three for the benefit of the backward pass, which
 // can use separate streams for calculating the gradient w.r.t.
@@ -264,5 +264,5 @@ CuDNNConvolutionLayer<Dtype>::~CuDNNConvolutionLayer() {
 
 INSTANTIATE_CLASS(CuDNNConvolutionLayer);
 
-}   // namespace caffe
+}   // namespace caffe9
 #endif

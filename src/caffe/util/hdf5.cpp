@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-namespace caffe {
+namespace caffe9 {
 
 // Verifies format of data stored in HDF5 file and reshapes blob accordingly.
 template <typename Dtype>
@@ -184,4 +184,4 @@ string hdf5_get_name_by_idx(hid_t loc_id, int idx) {
   return result;
 }
 
-}  // namespace caffe
+}  // namespace caffe9

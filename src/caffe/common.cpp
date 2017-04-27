@@ -7,7 +7,7 @@
 #include "caffe/common.hpp"
 #include "caffe/util/rng.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 // Make sure each thread can have different values.
 static boost::thread_specific_ptr<Caffe> thread_instance_;
@@ -82,11 +82,11 @@ int Caffe::FindDevice(const int start_id) {
 
 class Caffe::RNG::Generator {
  public:
-  Generator() : rng_(new caffe::rng_t(cluster_seedgen())) {}
-  explicit Generator(unsigned int seed) : rng_(new caffe::rng_t(seed)) {}
-  caffe::rng_t* rng() { return rng_.get(); }
+  Generator() : rng_(new caffe9::rng_t(cluster_seedgen())) {}
+  explicit Generator(unsigned int seed) : rng_(new caffe9::rng_t(seed)) {}
+  caffe9::rng_t* rng() { return rng_.get(); }
  private:
-  shared_ptr<caffe::rng_t> rng_;
+  shared_ptr<caffe9::rng_t> rng_;
 };
 
 Caffe::RNG::RNG() : generator_(new Generator()) { }
@@ -237,11 +237,11 @@ int Caffe::FindDevice(const int start_id) {
 
 class Caffe::RNG::Generator {
  public:
-  Generator() : rng_(new caffe::rng_t(cluster_seedgen())) {}
-  explicit Generator(unsigned int seed) : rng_(new caffe::rng_t(seed)) {}
-  caffe::rng_t* rng() { return rng_.get(); }
+  Generator() : rng_(new caffe9::rng_t(cluster_seedgen())) {}
+  explicit Generator(unsigned int seed) : rng_(new caffe9::rng_t(seed)) {}
+  caffe9::rng_t* rng() { return rng_.get(); }
  private:
-  shared_ptr<caffe::rng_t> rng_;
+  shared_ptr<caffe9::rng_t> rng_;
 };
 
 Caffe::RNG::RNG() : generator_(new Generator()) { }
@@ -321,4 +321,4 @@ const char* curandGetErrorString(curandStatus_t error) {
 
 #endif  // CPU_ONLY
 
-}  // namespace caffe
+}  // namespace caffe9

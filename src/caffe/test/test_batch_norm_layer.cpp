@@ -15,7 +15,7 @@
 #define BATCH_SIZE 2
 #define INPUT_DATA_SIZE 3
 
-namespace caffe {
+namespace caffe9 {
 
   template <typename TypeParam>
   class BatchNormLayerTest : public MultiDeviceTest<TypeParam> {
@@ -130,4 +130,4 @@ namespace caffe {
         this->blob_top_vec_);
   }
 
-}  // namespace caffe
+}  // namespace caffe9

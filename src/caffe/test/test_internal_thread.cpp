@@ -6,7 +6,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 
 class InternalThreadTest : public ::testing::Test {};
@@ -49,5 +49,5 @@ TEST_F(InternalThreadTest, TestRandomSeed) {
   t3.StopInternalThread();
 }
 
-}  // namespace caffe
+}  // namespace caffe9
 

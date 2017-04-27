@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace caffe { namespace db {
+namespace caffe9 { namespace db {
 
 void LevelDB::Open(const string& source, Mode mode) {
   leveldb::Options options;
@@ -19,5 +19,5 @@ void LevelDB::Open(const string& source, Mode mode) {
 }
 
 }  // namespace db
-}  // namespace caffe
+}  // namespace caffe9
 #endif  // USE_LEVELDB

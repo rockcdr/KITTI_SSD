@@ -9,7 +9,7 @@
 
 #include "caffe/layers/neuron_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Computes @f$ y = log_{\gamma}(\alpha x + \beta) @f$,
@@ -77,6 +77,6 @@ class LogLayer : public NeuronLayer<Dtype> {
   Dtype backward_num_scale_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_LOG_LAYER_HPP_

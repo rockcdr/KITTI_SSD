@@ -9,7 +9,7 @@
 
 #include "caffe/layers/neuron_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Rectified Linear Unit non-linearity @f$ y = \max(0, x) @f$.
@@ -80,6 +80,6 @@ class ReLULayer : public NeuronLayer<Dtype> {
       const vector<bool>& propagate_down, const vector<Blob<Dtype>*>& bottom);
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_RELU_LAYER_HPP_

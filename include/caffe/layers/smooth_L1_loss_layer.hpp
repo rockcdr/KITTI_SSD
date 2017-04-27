@@ -17,7 +17,7 @@
 
 #include "caffe/layers/loss_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Computes the SmoothL1 loss as introduced in:@f$
@@ -63,6 +63,6 @@ class SmoothL1LossLayer : public LossLayer<Dtype> {
   bool has_weights_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_SMOOTH_L1_LOSS_LAYER_HPP_

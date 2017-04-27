@@ -2,7 +2,7 @@
 
 #include "caffe/sgd_solvers.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void AdaDeltaSolver<Dtype>::AdaDeltaPreSolve() {
@@ -109,4 +109,4 @@ void AdaDeltaSolver<Dtype>::ComputeUpdateValue(int param_id, Dtype rate) {
 INSTANTIATE_CLASS(AdaDeltaSolver);
 REGISTER_SOLVER_CLASS(AdaDelta);
 
-}  // namespace caffe
+}  // namespace caffe9

@@ -6,7 +6,7 @@
 #include "caffe/layers/multibox_loss_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void MultiBoxLossLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -577,4 +577,4 @@ STUB_GPU(MultiBoxLossLayer);
 INSTANTIATE_CLASS(MultiBoxLossLayer);
 REGISTER_LAYER_CLASS(MultiBoxLoss);
 
-}  // namespace caffe
+}  // namespace caffe9

@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Computes the softmax function.
@@ -45,6 +45,6 @@ class SoftmaxLayer : public Layer<Dtype> {
   Blob<Dtype> scale_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_SOFTMAX_LAYER_HPP_

@@ -13,7 +13,7 @@
 
 using std::min;
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename TypeParam>
 class StochasticPoolingLayerTest : public MultiDeviceTest<TypeParam> {
@@ -172,4 +172,4 @@ TYPED_TEST(GPUStochasticPoolingLayerTest, TestGradient) {
 
 #endif
 
-}  // namespace caffe
+}  // namespace caffe9

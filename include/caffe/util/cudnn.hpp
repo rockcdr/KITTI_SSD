@@ -45,7 +45,7 @@ inline const char* cudnnGetErrorString(cudnnStatus_t status) {
   return "Unknown cudnn status";
 }
 
-namespace caffe {
+namespace caffe9 {
 
 namespace cudnn {
 
@@ -129,7 +129,7 @@ inline void createPoolingDesc(cudnnPoolingDescriptor_t* pool_desc,
 
 }  // namespace cudnn
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // USE_CUDNN
 #endif  // CAFFE_UTIL_CUDNN_H_

@@ -2,7 +2,7 @@
 
 #include "caffe/sgd_solvers.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 #ifndef CPU_ONLY
 template <typename Dtype>
@@ -67,4 +67,4 @@ void RMSPropSolver<Dtype>::ComputeUpdateValue(int param_id, Dtype rate) {
 INSTANTIATE_CLASS(RMSPropSolver);
 REGISTER_SOLVER_CLASS(RMSProp);
 
-}  // namespace caffe
+}  // namespace caffe9

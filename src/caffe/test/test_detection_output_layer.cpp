@@ -14,7 +14,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 static const float eps = 1e-6;
 
@@ -336,4 +336,4 @@ TYPED_TEST(DetectionOutputLayerTest, TestForwardNoShareLocationNeg0TopK) {
   this->CheckEqual(*(this->blob_top_), 2, "1 1 0.6 0.40 0.40 0.70 0.70");
 }
 
-}  // namespace caffe
+}  // namespace caffe9

@@ -14,7 +14,7 @@
 #include "caffe/syncedmem.hpp"
 #include "caffe/util/blocking_queue.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 // Represents a net parameters. Once a net is created, its parameter buffers can
 // be replaced by ones from Params, to allow parallelization. Params ensures
@@ -116,6 +116,6 @@ class P2PSync : public GPUParams<Dtype>, public Solver<Dtype>::Callback,
   using Params<Dtype>::diff_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif

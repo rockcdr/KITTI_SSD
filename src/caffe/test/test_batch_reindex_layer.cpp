@@ -10,7 +10,7 @@
 #include "caffe/test/test_caffe_main.hpp"
 #include "caffe/test/test_gradient_check_util.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template<typename TypeParam>
 class BatchReindexLayerTest : public MultiDeviceTest<TypeParam> {
@@ -115,4 +115,4 @@ TYPED_TEST(BatchReindexLayerTest, TestGradient) {
       this->blob_top_vec_, 0);
   }
 
-}  // namespace caffe
+}  // namespace caffe9

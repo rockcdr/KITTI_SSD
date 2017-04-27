@@ -10,7 +10,7 @@
 #include "caffe/util/device_alternate.hpp"
 #include "caffe/util/mkl_alternate.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 // Caffe gemm provides a simpler interface to the gemm functions, with the
 // limitation that the data has to be contiguous in memory.
@@ -268,6 +268,6 @@ void caffe_gpu_##name<double>(const int n, const double* x, double* y) { \
 
 #endif  // !CPU_ONLY
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_UTIL_MATH_FUNCTIONS_H_

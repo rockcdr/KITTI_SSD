@@ -14,7 +14,7 @@
 #include "caffe/test/test_caffe_main.hpp"
 #include "caffe/test/test_gradient_check_util.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename TypeParam>
 class PoolingLayerTest : public MultiDeviceTest<TypeParam> {
@@ -1182,4 +1182,4 @@ TYPED_TEST(CuDNNPoolingLayerTest, TestGradientAvePaddedCuDNN) {
 
 #endif
 
-}  // namespace caffe
+}  // namespace caffe9

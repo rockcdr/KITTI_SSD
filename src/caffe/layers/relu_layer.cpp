@@ -3,7 +3,7 @@
 
 #include "caffe/layers/relu_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void ReLULayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom,
@@ -42,4 +42,4 @@ STUB_GPU(ReLULayer);
 
 INSTANTIATE_CLASS(ReLULayer);
 
-}  // namespace caffe
+}  // namespace caffe9

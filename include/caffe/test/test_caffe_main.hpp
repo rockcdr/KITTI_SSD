@@ -25,7 +25,7 @@ using std::endl;
 
 int main(int argc, char** argv);
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename TypeParam>
 class MultiDeviceTest : public ::testing::Test {
@@ -73,6 +73,6 @@ typedef ::testing::Types<CPUDevice<float>, CPUDevice<double>,
 
 #endif
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_TEST_TEST_CAFFE_MAIN_HPP_

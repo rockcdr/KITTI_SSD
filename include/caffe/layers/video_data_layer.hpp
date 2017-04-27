@@ -20,7 +20,7 @@
 #include "caffe/proto/caffe.pb.h"
 #include "caffe/util/db.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Provides data to the Net from webcam or video files.
@@ -46,6 +46,6 @@ class VideoDataLayer : public BasePrefetchingDataLayer<Dtype> {
   cv::VideoCapture cap_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_VIDEO_DATA_LAYER_HPP_

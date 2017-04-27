@@ -5,7 +5,7 @@
 
 #include "caffe/layers/cudnn_softmax_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void CuDNNSoftmaxLayer<Dtype>::Forward_gpu(const vector<Blob<Dtype>*>& bottom,
@@ -40,5 +40,5 @@ void CuDNNSoftmaxLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 
 INSTANTIATE_LAYER_GPU_FUNCS(CuDNNSoftmaxLayer);
 
-}  // namespace caffe
+}  // namespace caffe9
 #endif

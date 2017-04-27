@@ -9,7 +9,7 @@
 
 #include "caffe/layers/loss_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Computes the multinomial logistic loss for a one-of-many
@@ -87,6 +87,6 @@ class MultinomialLogisticLossLayer : public LossLayer<Dtype> {
       const vector<bool>& propagate_down, const vector<Blob<Dtype>*>& bottom);
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_MULTINOMIAL_LOGISTIC_LOSS_LAYER_HPP_

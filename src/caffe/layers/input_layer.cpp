@@ -2,7 +2,7 @@
 
 #include "caffe/layers/input_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void InputLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -24,4 +24,4 @@ void InputLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
 INSTANTIATE_CLASS(InputLayer);
 REGISTER_LAYER_CLASS(Input);
 
-}  // namespace caffe
+}  // namespace caffe9

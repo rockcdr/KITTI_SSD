@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief A layer for learning "embeddings" of one-hot vector input.
@@ -47,6 +47,6 @@ class EmbedLayer : public Layer<Dtype> {
   Blob<Dtype> bias_multiplier_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_EMBED_LAYER_HPP_

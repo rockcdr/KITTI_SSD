@@ -3,7 +3,7 @@
 #include "caffe/common.hpp"
 #include "caffe/util/im2col.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 __global__ void im2col_gpu_kernel(const int n, const Dtype* data_im,
@@ -509,4 +509,4 @@ template void col2im_nd_gpu<double>(const double* data_col,
     const int* kernel_shape, const int* pad, const int* stride,
     const int* dilation, double* data_im);
 
-}  // namespace caffe
+}  // namespace caffe9

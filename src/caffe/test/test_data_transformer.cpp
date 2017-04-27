@@ -14,7 +14,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 class DataTransformTest : public ::testing::Test {
@@ -455,5 +455,5 @@ TYPED_TEST(DataTransformTest, TestRichLabelCropMirror) {
   }
 }
 
-}  // namespace caffe
+}  // namespace caffe9
 #endif  // USE_OPENCV

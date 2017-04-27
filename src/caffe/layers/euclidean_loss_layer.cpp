@@ -3,7 +3,7 @@
 #include "caffe/layers/euclidean_loss_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void EuclideanLossLayer<Dtype>::Reshape(
@@ -52,4 +52,4 @@ STUB_GPU(EuclideanLossLayer);
 INSTANTIATE_CLASS(EuclideanLossLayer);
 REGISTER_LAYER_CLASS(EuclideanLoss);
 
-}  // namespace caffe
+}  // namespace caffe9

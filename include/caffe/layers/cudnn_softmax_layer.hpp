@@ -9,7 +9,7 @@
 
 #include "caffe/layers/softmax_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 #ifdef USE_CUDNN
 /**
@@ -40,6 +40,6 @@ class CuDNNSoftmaxLayer : public SoftmaxLayer<Dtype> {
 };
 #endif
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_CUDNN_SOFTMAX_LAYER_HPP_

@@ -3,7 +3,7 @@
 #include "caffe/filler.hpp"
 #include "caffe/layers/normalize_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void NormalizeLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -231,4 +231,4 @@ STUB_GPU(NormalizeLayer);
 INSTANTIATE_CLASS(NormalizeLayer);
 REGISTER_LAYER_CLASS(Normalize);
 
-}  // namespace caffe
+}  // namespace caffe9

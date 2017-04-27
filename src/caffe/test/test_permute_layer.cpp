@@ -10,7 +10,7 @@
 #include "caffe/test/test_caffe_main.hpp"
 #include "caffe/test/test_gradient_check_util.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 static const float eps = 1e-6;
 
@@ -256,4 +256,4 @@ TYPED_TEST(PermuteLayerTest, TestGradient) {
       this->blob_top_vec_);
 }
 
-}  // namespace caffe
+}  // namespace caffe9

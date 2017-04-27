@@ -12,7 +12,7 @@
 #include "caffe/caffe.hpp"
 #include "caffe/parallel.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 enum Op {
   copy,
@@ -440,4 +440,4 @@ INSTANTIATE_CLASS(Params);
 INSTANTIATE_CLASS(GPUParams);
 INSTANTIATE_CLASS(P2PSync);
 
-}  // namespace caffe
+}  // namespace caffe9

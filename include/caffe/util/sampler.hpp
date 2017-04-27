@@ -7,7 +7,7 @@
 
 #include "caffe/caffe.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 // Find all annotated NormalizedBBox.
 void GroupObjectBBoxes(const AnnotatedDatum& anno_datum,
@@ -34,6 +34,6 @@ void GenerateBatchSamples(const AnnotatedDatum& anno_datum,
                           const vector<BatchSampler>& batch_samplers,
                           vector<NormalizedBBox>* sampled_bboxes);
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_UTIL_SAMPLER_H_

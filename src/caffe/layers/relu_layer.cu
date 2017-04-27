@@ -3,7 +3,7 @@
 
 #include "caffe/layers/relu_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 __global__ void ReLUForward(const int n, const Dtype* in, Dtype* out,
@@ -61,4 +61,4 @@ void ReLULayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 INSTANTIATE_LAYER_GPU_FUNCS(ReLULayer);
 
 
-}  // namespace caffe
+}  // namespace caffe9

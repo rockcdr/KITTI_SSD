@@ -20,7 +20,7 @@
 #include "caffe/util/im_transforms.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 const float prob_eps = 0.01;
 
@@ -519,6 +519,6 @@ cv::Mat ApplyNoise(const cv::Mat& in_img, const NoiseParameter& param) {
   return  out_img;
 }
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // USE_OPENCV

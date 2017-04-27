@@ -5,7 +5,7 @@
 
 #include "caffe/layers/argmax_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void ArgMaxLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -98,4 +98,4 @@ void ArgMaxLayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom,
 INSTANTIATE_CLASS(ArgMaxLayer);
 REGISTER_LAYER_CLASS(ArgMax);
 
-}  // namespace caffe
+}  // namespace caffe9

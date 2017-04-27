@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Normalizes the input to have 0-mean and/or unit (1) variance.
@@ -43,6 +43,6 @@ class MVNLayer : public Layer<Dtype> {
   Dtype eps_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_MVN_LAYER_HPP_

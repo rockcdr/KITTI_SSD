@@ -3,7 +3,7 @@
 #include "caffe/layers/filter_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void FilterLayer<Dtype>::Forward_gpu(const vector<Blob<Dtype>*>& bottom,
@@ -66,4 +66,4 @@ void FilterLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 
 INSTANTIATE_LAYER_GPU_FUNCS(FilterLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

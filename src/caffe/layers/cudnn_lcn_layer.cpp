@@ -3,7 +3,7 @@
 
 #include "caffe/layers/cudnn_lcn_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void CuDNNLCNLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -69,5 +69,5 @@ CuDNNLCNLayer<Dtype>::~CuDNNLCNLayer() {
 
 INSTANTIATE_CLASS(CuDNNLCNLayer);
 
-}   // namespace caffe
+}   // namespace caffe9
 #endif

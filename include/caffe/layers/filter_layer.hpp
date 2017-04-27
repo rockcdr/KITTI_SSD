@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Takes two+ Blobs, interprets last Blob as a selector and
@@ -72,6 +72,6 @@ class FilterLayer : public Layer<Dtype> {
   vector<int> indices_to_forward_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_FILTER_LAYER_HPP_

@@ -9,7 +9,7 @@
 #include "caffe/3rdparty/hungarian.h"
 #include "caffe/util/bbox_util.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 bool SortBBoxAscend(const NormalizedBBox& bbox1, const NormalizedBBox& bbox2) {
   return bbox1.score() < bbox2.score();
@@ -1090,4 +1090,4 @@ void VisualizeBBox(const vector<cv::Mat>& images,
 
 #endif  // USE_OPENCV
 
-}  // namespace caffe
+}  // namespace caffe9

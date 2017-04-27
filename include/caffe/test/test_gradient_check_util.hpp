@@ -11,7 +11,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/net.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 // The gradient checker adds a L2 normalization loss function on top of the
 // top blobs, and checks the gradient.
@@ -261,6 +261,6 @@ Dtype GradientChecker<Dtype>::GetObjAndGradient(const Layer<Dtype>& layer,
   return loss;
 }
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_TEST_GRADIENT_CHECK_UTIL_H_

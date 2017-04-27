@@ -7,7 +7,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 const float kMillisecondsThreshold = 30;
 
@@ -87,4 +87,4 @@ TYPED_TEST(BenchmarkTest, TestTimerSeconds) {
   EXPECT_TRUE(timer.has_run_at_least_once());
 }
 
-}  // namespace caffe
+}  // namespace caffe9

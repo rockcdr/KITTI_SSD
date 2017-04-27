@@ -9,7 +9,7 @@
 #include "caffe/layers/data_layer.hpp"
 #include "caffe/util/benchmark.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 DataLayer<Dtype>::DataLayer(const LayerParameter& param)
@@ -107,4 +107,4 @@ void DataLayer<Dtype>::load_batch(Batch<Dtype>* batch) {
 INSTANTIATE_CLASS(DataLayer);
 REGISTER_LAYER_CLASS(Data);
 
-}  // namespace caffe
+}  // namespace caffe9

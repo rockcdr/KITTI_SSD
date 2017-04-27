@@ -5,7 +5,7 @@
 #include "caffe/layers/permute_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 __global__ void PermuteKernel(const int nthreads,
@@ -75,4 +75,4 @@ void PermuteLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 
 INSTANTIATE_LAYER_GPU_FUNCS(PermuteLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

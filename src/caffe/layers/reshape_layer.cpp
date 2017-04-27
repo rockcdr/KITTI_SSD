@@ -2,7 +2,7 @@
 
 #include "caffe/layers/reshape_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void ReshapeLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -93,4 +93,4 @@ void ReshapeLayer<Dtype>::Reshape(const vector<Blob<Dtype>*>& bottom,
 INSTANTIATE_CLASS(ReshapeLayer);
 REGISTER_LAYER_CLASS(Reshape);
 
-}  // namespace caffe
+}  // namespace caffe9

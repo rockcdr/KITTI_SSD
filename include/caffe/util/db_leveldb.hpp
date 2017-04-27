@@ -9,7 +9,7 @@
 
 #include "caffe/util/db.hpp"
 
-namespace caffe { namespace db {
+namespace caffe9 { namespace db {
 
 class LevelDBCursor : public Cursor {
  public:
@@ -69,7 +69,7 @@ class LevelDB : public DB {
 
 
 }  // namespace db
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_UTIL_DB_LEVELDB_HPP
 #endif  // USE_LEVELDB

@@ -2,7 +2,7 @@
 
 #include "caffe/layers/deconv_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void DeconvolutionLayer<Dtype>::compute_output_shape() {
@@ -81,4 +81,4 @@ STUB_GPU(DeconvolutionLayer);
 INSTANTIATE_CLASS(DeconvolutionLayer);
 REGISTER_LAYER_CLASS(Deconvolution);
 
-}  // namespace caffe
+}  // namespace caffe9

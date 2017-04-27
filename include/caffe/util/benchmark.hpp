@@ -5,7 +5,7 @@
 
 #include "caffe/util/device_alternate.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 class Timer {
  public:
@@ -47,6 +47,6 @@ class CPUTimer : public Timer {
   virtual float MicroSeconds();
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif   // CAFFE_UTIL_BENCHMARK_H_

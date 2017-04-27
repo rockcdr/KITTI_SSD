@@ -10,7 +10,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 class DummyDataLayerTest : public CPUDeviceTest<Dtype> {
@@ -190,4 +190,4 @@ TYPED_TEST(DummyDataLayerTest, TestThreeTopConstantGaussianConstant) {
   }
 }
 
-}  // namespace caffe
+}  // namespace caffe9

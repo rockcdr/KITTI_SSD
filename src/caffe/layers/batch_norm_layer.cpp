@@ -4,7 +4,7 @@
 #include "caffe/layers/batch_norm_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void BatchNormLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -236,4 +236,4 @@ STUB_GPU(BatchNormLayer);
 
 INSTANTIATE_CLASS(BatchNormLayer);
 REGISTER_LAYER_CLASS(BatchNorm);
-}  // namespace caffe
+}  // namespace caffe9

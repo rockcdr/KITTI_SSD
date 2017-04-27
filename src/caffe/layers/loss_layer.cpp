@@ -3,7 +3,7 @@
 
 #include "caffe/layers/loss_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void LossLayer<Dtype>::LayerSetUp(
@@ -56,4 +56,4 @@ Dtype LossLayer<Dtype>::GetNormalizer(
 
 INSTANTIATE_CLASS(LossLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

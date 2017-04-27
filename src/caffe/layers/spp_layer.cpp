@@ -8,7 +8,7 @@
 #include "caffe/layers/split_layer.hpp"
 #include "caffe/layers/spp_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 using std::min;
 using std::max;
@@ -225,4 +225,4 @@ void SPPLayer<Dtype>::Backward_cpu(const vector<Blob<Dtype>*>& top,
 INSTANTIATE_CLASS(SPPLayer);
 REGISTER_LAYER_CLASS(SPP);
 
-}  // namespace caffe
+}  // namespace caffe9

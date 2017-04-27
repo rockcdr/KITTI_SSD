@@ -8,7 +8,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 class RandomNumberGeneratorTest : public ::testing::Test {
@@ -517,4 +517,4 @@ TYPED_TEST(RandomNumberGeneratorTest, TestRngUniformTimesUniformGPU) {
 
 #endif
 
-}  // namespace caffe
+}  // namespace caffe9

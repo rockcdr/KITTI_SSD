@@ -9,7 +9,7 @@
 
 #include "caffe/layers/loss_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief A generalization of MultinomialLogisticLossLayer that takes an
@@ -105,6 +105,6 @@ class InfogainLossLayer : public LossLayer<Dtype> {
   Blob<Dtype> infogain_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_INFOGAIN_LOSS_LAYER_HPP_

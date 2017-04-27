@@ -14,7 +14,7 @@
 
 using std::ostringstream;
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename TypeParam>
 class SolverTest : public MultiDeviceTest<TypeParam> {
@@ -106,4 +106,4 @@ TYPED_TEST(SolverTest, TestInitTrainTestNets) {
   EXPECT_TRUE(this->solver_->test_nets()[1]->has_layer("accuracy"));
 }
 
-}  // namespace caffe
+}  // namespace caffe9

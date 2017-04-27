@@ -3,7 +3,7 @@
 #include "caffe/layers/power_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void PowerLayer<Dtype>::Forward_gpu(const vector<Blob<Dtype>*>& bottom,
@@ -82,4 +82,4 @@ void PowerLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 INSTANTIATE_LAYER_GPU_FUNCS(PowerLayer);
 
 
-}  // namespace caffe
+}  // namespace caffe9

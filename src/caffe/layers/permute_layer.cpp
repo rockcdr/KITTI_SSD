@@ -3,7 +3,7 @@
 #include "caffe/layers/permute_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void Permute(const int count, Dtype* bottom_data, const bool forward,
@@ -139,4 +139,4 @@ STUB_GPU(PermuteLayer);
 INSTANTIATE_CLASS(PermuteLayer);
 REGISTER_LAYER_CLASS(Permute);
 
-}  // namespace caffe
+}  // namespace caffe9

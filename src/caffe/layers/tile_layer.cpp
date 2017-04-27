@@ -3,7 +3,7 @@
 #include "caffe/layers/tile_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void TileLayer<Dtype>::Reshape(
@@ -58,4 +58,4 @@ STUB_GPU(TileLayer);
 INSTANTIATE_CLASS(TileLayer);
 REGISTER_LAYER_CLASS(Tile);
 
-}  // namespace caffe
+}  // namespace caffe9

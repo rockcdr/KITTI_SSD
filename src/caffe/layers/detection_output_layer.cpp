@@ -10,7 +10,7 @@
 
 #include "caffe/layers/detection_output_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void DetectionOutputLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -387,4 +387,4 @@ STUB_GPU_FORWARD(DetectionOutputLayer, Forward);
 INSTANTIATE_CLASS(DetectionOutputLayer);
 REGISTER_LAYER_CLASS(DetectionOutput);
 
-}  // namespace caffe
+}  // namespace caffe9

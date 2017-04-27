@@ -8,7 +8,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Index into the input blob along its first axis.
@@ -78,6 +78,6 @@ class BatchReindexLayer : public Layer<Dtype> {
                            const Dtype* ridx_data);
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_BATCHREINDEX_LAYER_HPP_

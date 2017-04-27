@@ -3,7 +3,7 @@
 #include "caffe/layers/lrn_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 __global__ void LRNFillScale(const int nthreads, const Dtype* const in,
@@ -199,4 +199,4 @@ template void LRNLayer<double>::CrossChannelBackward_gpu(
 
 INSTANTIATE_LAYER_GPU_FUNCS(LRNLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

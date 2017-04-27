@@ -3,7 +3,7 @@
 #include "caffe/layers/reduction_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void ReductionLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -126,4 +126,4 @@ STUB_GPU(ReductionLayer);
 INSTANTIATE_CLASS(ReductionLayer);
 REGISTER_LAYER_CLASS(Reduction);
 
-}  // namespace caffe
+}  // namespace caffe9

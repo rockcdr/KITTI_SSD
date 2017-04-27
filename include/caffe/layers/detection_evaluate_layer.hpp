@@ -8,7 +8,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Generate the detection evaluation based on DetectionOutputLayer and
@@ -63,6 +63,6 @@ class DetectionEvaluateLayer : public Layer<Dtype> {
   bool use_normalized_bbox_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_DETECTION_EVALUATE_LAYER_HPP_

@@ -10,7 +10,7 @@
 #include "caffe/test/test_caffe_main.hpp"
 #include "caffe/test/test_gradient_check_util.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename TypeParam>
 class ReductionLayerTest : public MultiDeviceTest<TypeParam> {
@@ -293,4 +293,4 @@ TYPED_TEST(ReductionLayerTest, TestSumOfSquaresCoeffAxis1Gradient) {
   this->TestGradient(kOp, kCoeff, kAxis);
 }
 
-}  // namespace caffe
+}  // namespace caffe9

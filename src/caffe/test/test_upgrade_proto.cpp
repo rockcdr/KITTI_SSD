@@ -14,7 +14,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 class PaddingLayerUpgradeTest : public ::testing::Test {
  protected:
@@ -2986,4 +2986,4 @@ TEST_F(SolverTypeUpgradeTest, TestSimple) {
   }
 }
 
-}  // NOLINT(readability/fn_size)  // namespace caffe
+}  // NOLINT(readability/fn_size)  // namespace caffe9

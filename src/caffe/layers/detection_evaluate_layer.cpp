@@ -6,7 +6,7 @@
 #include "caffe/layers/detection_evaluate_layer.hpp"
 #include "caffe/util/bbox_util.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void DetectionEvaluateLayer<Dtype>::LayerSetUp(
@@ -227,4 +227,4 @@ void DetectionEvaluateLayer<Dtype>::Forward_cpu(
 INSTANTIATE_CLASS(DetectionEvaluateLayer);
 REGISTER_LAYER_CLASS(DetectionEvaluate);
 
-}  // namespace caffe
+}  // namespace caffe9

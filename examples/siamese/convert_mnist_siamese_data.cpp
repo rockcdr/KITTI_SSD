@@ -78,15 +78,15 @@ void convert_dataset(const char* image_filename, const char* label_filename,
   char* pixels = new char[2 * rows * cols];
   std::string value;
 
-  caffe::Datum datum;
+  caffe9::Datum datum;
   datum.set_channels(2);  // one channel for each image in the pair
   datum.set_height(rows);
   datum.set_width(cols);
   LOG(INFO) << "A total of " << num_items << " items.";
   LOG(INFO) << "Rows: " << rows << " Cols: " << cols;
   for (int itemid = 0; itemid < num_items; ++itemid) {
-    int i = caffe::caffe_rng_rand() % num_items;  // pick a random  pair
-    int j = caffe::caffe_rng_rand() % num_items;
+    int i = caffe9::caffe_rng_rand() % num_items;  // pick a random  pair
+    int j = caffe9::caffe_rng_rand() % num_items;
     read_image(&image_file, &label_file, i, rows, cols,
         pixels, &label_i);
     read_image(&image_file, &label_file, j, rows, cols,
@@ -98,7 +98,7 @@ void convert_dataset(const char* image_filename, const char* label_filename,
       datum.set_label(0);
     }
     datum.SerializeToString(&value);
-    std::string key_str = caffe::format_int(itemid, 8);
+    std::string key_str = caffe9::format_int(itemid, 8);
     db->Put(leveldb::WriteOptions(), key_str, value);
   }
 

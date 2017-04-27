@@ -3,7 +3,7 @@
 #include "caffe/layers/filter_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void FilterLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -122,4 +122,4 @@ STUB_GPU(FilterLayer);
 INSTANTIATE_CLASS(FilterLayer);
 REGISTER_LAYER_CLASS(Filter);
 
-}  // namespace caffe
+}  // namespace caffe9

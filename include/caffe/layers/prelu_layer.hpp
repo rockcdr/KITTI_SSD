@@ -9,7 +9,7 @@
 
 #include "caffe/layers/neuron_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Parameterized Rectified Linear Unit non-linearity @f$
@@ -96,6 +96,6 @@ class PReLULayer : public NeuronLayer<Dtype> {
   Blob<Dtype> bottom_memory_;  // memory for in-place computation
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_PRELU_LAYER_HPP_

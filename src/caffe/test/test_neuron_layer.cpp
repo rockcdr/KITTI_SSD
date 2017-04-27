@@ -31,7 +31,7 @@
 #include "caffe/test/test_caffe_main.hpp"
 #include "caffe/test/test_gradient_check_util.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename TypeParam>
 class NeuronLayerTest : public MultiDeviceTest<TypeParam> {
@@ -935,4 +935,4 @@ TYPED_TEST(CuDNNNeuronLayerTest, TestTanHGradientCuDNN) {
 }
 #endif
 
-}  // namespace caffe
+}  // namespace caffe9

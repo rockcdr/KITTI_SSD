@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Ignores bottom blobs while producing no top blobs. (This is useful
@@ -38,6 +38,6 @@ class SilenceLayer : public Layer<Dtype> {
       const vector<bool>& propagate_down, const vector<Blob<Dtype>*>& bottom);
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_SILENCE_LAYER_HPP_

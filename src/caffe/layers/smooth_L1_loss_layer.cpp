@@ -11,7 +11,7 @@
 #include "caffe/layers/smooth_L1_loss_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void SmoothL1LossLayer<Dtype>::LayerSetUp(
@@ -105,4 +105,4 @@ STUB_GPU(SmoothL1LossLayer);
 INSTANTIATE_CLASS(SmoothL1LossLayer);
 REGISTER_LAYER_CLASS(SmoothL1Loss);
 
-}  // namespace caffe
+}  // namespace caffe9

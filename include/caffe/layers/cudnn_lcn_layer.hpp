@@ -10,7 +10,7 @@
 #include "caffe/layers/lrn_layer.hpp"
 #include "caffe/layers/power_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 #ifdef USE_CUDNN
 template <typename Dtype>
@@ -44,6 +44,6 @@ class CuDNNLCNLayer : public LRNLayer<Dtype> {
 };
 #endif
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_CUDNN_LCN_LAYER_HPP_

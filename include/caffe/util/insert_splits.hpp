@@ -5,7 +5,7 @@
 
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 // Copy NetParameters with SplitLayers added to replace any shared bottom
 // blobs with unique bottom blobs provided by the SplitLayer.
@@ -21,6 +21,6 @@ string SplitLayerName(const string& layer_name, const string& blob_name,
 string SplitBlobName(const string& layer_name, const string& blob_name,
     const int blob_idx, const int split_idx);
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_UTIL_INSERT_SPLITS_HPP_

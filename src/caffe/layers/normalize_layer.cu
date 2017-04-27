@@ -8,7 +8,7 @@
 #include "caffe/layers/normalize_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 // divid a matrix with vector
 template <typename Dtype>
@@ -217,4 +217,4 @@ void NormalizeLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 INSTANTIATE_LAYER_GPU_FUNCS(NormalizeLayer);
 
 
-}  // namespace caffe
+}  // namespace caffe9

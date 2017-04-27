@@ -56,14 +56,14 @@ void classname<Dtype>::funcname##_##gpu(const vector<Blob<Dtype>*>& top, \
   do { \
     cublasStatus_t status = condition; \
     CHECK_EQ(status, CUBLAS_STATUS_SUCCESS) << " " \
-      << caffe::cublasGetErrorString(status); \
+      << caffe9::cublasGetErrorString(status); \
   } while (0)
 
 #define CURAND_CHECK(condition) \
   do { \
     curandStatus_t status = condition; \
     CHECK_EQ(status, CURAND_STATUS_SUCCESS) << " " \
-      << caffe::curandGetErrorString(status); \
+      << caffe9::curandGetErrorString(status); \
   } while (0)
 
 // CUDA: grid stride looping
@@ -75,7 +75,7 @@ void classname<Dtype>::funcname##_##gpu(const vector<Blob<Dtype>*>& top, \
 // CUDA: check for error after kernel execution and exit loudly if there is one.
 #define CUDA_POST_KERNEL_CHECK CUDA_CHECK(cudaPeekAtLastError())
 
-namespace caffe {
+namespace caffe9 {
 
 // CUDA: library error reporting.
 const char* cublasGetErrorString(cublasStatus_t error);
@@ -89,7 +89,7 @@ inline int CAFFE_GET_BLOCKS(const int N) {
   return (N + CAFFE_CUDA_NUM_THREADS - 1) / CAFFE_CUDA_NUM_THREADS;
 }
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CPU_ONLY
 

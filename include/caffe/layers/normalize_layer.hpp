@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Normalizes the input to have L_p norm of 1 with scale learnable.
@@ -46,6 +46,6 @@ class NormalizeLayer : public Layer<Dtype> {
   Dtype eps_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_MVN_LAYER_HPP_

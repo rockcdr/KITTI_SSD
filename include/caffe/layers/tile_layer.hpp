@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Copy a Blob along specified dimensions.
@@ -38,6 +38,6 @@ class TileLayer : public Layer<Dtype> {
   unsigned int axis_, tiles_, outer_dim_, inner_dim_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_TILE_LAYER_HPP_

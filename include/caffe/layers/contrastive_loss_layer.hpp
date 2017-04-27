@@ -9,7 +9,7 @@
 
 #include "caffe/layers/loss_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Computes the contrastive loss @f$
@@ -96,6 +96,6 @@ class ContrastiveLossLayer : public LossLayer<Dtype> {
   Blob<Dtype> summer_vec_;  // tmp storage for gpu forward pass
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_CONTRASTIVE_LOSS_LAYER_HPP_

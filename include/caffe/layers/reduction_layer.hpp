@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Compute "reductions" -- operations that return a scalar output Blob
@@ -54,6 +54,6 @@ class ReductionLayer : public Layer<Dtype> {
   Blob<Dtype> sum_multiplier_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_REDUCTION_LAYER_HPP_

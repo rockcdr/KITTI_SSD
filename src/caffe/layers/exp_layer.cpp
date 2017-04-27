@@ -3,7 +3,7 @@
 #include "caffe/layers/exp_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void ExpLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -65,4 +65,4 @@ STUB_GPU(ExpLayer);
 INSTANTIATE_CLASS(ExpLayer);
 REGISTER_LAYER_CLASS(Exp);
 
-}  // namespace caffe
+}  // namespace caffe9

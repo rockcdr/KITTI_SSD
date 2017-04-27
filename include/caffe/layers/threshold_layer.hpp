@@ -9,7 +9,7 @@
 
 #include "caffe/layers/neuron_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Tests whether the input exceeds a threshold: outputs 1 for inputs
@@ -59,6 +59,6 @@ class ThresholdLayer : public NeuronLayer<Dtype> {
   Dtype threshold_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_THRESHOLD_LAYER_HPP_

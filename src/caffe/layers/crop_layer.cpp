@@ -10,7 +10,7 @@
 #include "caffe/net.hpp"
 
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void CropLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
@@ -147,4 +147,4 @@ STUB_GPU(CropLayer);
 INSTANTIATE_CLASS(CropLayer);
 REGISTER_LAYER_CLASS(Crop);
 
-}  // namespace caffe
+}  // namespace caffe9

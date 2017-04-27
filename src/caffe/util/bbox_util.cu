@@ -9,7 +9,7 @@
 #include "caffe/common.hpp"
 #include "caffe/util/bbox_util.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 __host__ __device__ Dtype BBoxSizeGPU(const Dtype* bbox,
@@ -411,4 +411,4 @@ template void GetDetectionsGPU(const double* bbox_data, const double* conf_data,
           const int image_id, const int label, const vector<int>& indices,
           const bool clip_bbox, Blob<double>* detection_blob);
 
-}  // namespace caffe
+}  // namespace caffe9

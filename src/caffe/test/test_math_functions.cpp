@@ -11,7 +11,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename TypeParam>
 class MathFunctionsTest : public MultiDeviceTest<TypeParam> {
@@ -200,4 +200,4 @@ TYPED_TEST(GPUMathFunctionsTest, TestCopy) {
 #endif
 
 
-}  // namespace caffe
+}  // namespace caffe9

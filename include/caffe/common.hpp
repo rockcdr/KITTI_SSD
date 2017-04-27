@@ -72,7 +72,7 @@ private:\
 // See PR #1236
 namespace cv { class Mat; }
 
-namespace caffe {
+namespace caffe9 {
 
 // We will use the boost shared_ptr instead of the new C++11 one mainly
 // because cuda does not work (at least now) well with C++11 features.
@@ -182,6 +182,6 @@ class Caffe {
   DISABLE_COPY_AND_ASSIGN(Caffe);
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_COMMON_HPP_

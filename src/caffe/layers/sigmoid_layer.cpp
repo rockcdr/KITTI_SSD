@@ -3,7 +3,7 @@
 
 #include "caffe/layers/sigmoid_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 inline Dtype sigmoid(Dtype x) {
@@ -44,4 +44,4 @@ STUB_GPU(SigmoidLayer);
 INSTANTIATE_CLASS(SigmoidLayer);
 
 
-}  // namespace caffe
+}  // namespace caffe9

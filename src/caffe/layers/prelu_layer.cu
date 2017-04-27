@@ -4,7 +4,7 @@
 #include "caffe/layers/neuron_layer.hpp"
 #include "caffe/layers/prelu_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 // CUDA kernele for forward
 template <typename Dtype>
@@ -125,4 +125,4 @@ void PReLULayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 INSTANTIATE_LAYER_GPU_FUNCS(PReLULayer);
 
 
-}  // namespace caffe
+}  // namespace caffe9

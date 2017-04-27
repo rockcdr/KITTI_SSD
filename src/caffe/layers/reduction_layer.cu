@@ -3,7 +3,7 @@
 #include "caffe/layers/reduction_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void ReductionLayer<Dtype>::Forward_gpu(
@@ -88,4 +88,4 @@ void ReductionLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 
 INSTANTIATE_LAYER_GPU_FUNCS(ReductionLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

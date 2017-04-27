@@ -12,7 +12,7 @@
 #include "caffe/layers/video_data_layer.hpp"
 #include "caffe/util/benchmark.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 VideoDataLayer<Dtype>::VideoDataLayer(const LayerParameter& param)
@@ -167,4 +167,4 @@ void VideoDataLayer<Dtype>::load_batch(Batch<Dtype>* batch) {
 INSTANTIATE_CLASS(VideoDataLayer);
 REGISTER_LAYER_CLASS(VideoData);
 
-}  // namespace caffe
+}  // namespace caffe9

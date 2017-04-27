@@ -7,7 +7,7 @@
 #include "caffe/layer.hpp"
 #include "caffe/proto/caffe.pb.h"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Permute the input blob by changing the memory order of the data.
@@ -54,6 +54,6 @@ class PermuteLayer : public Layer<Dtype> {
   Blob<int> new_steps_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_PERMUTE_LAYER_HPP_

@@ -12,12 +12,12 @@
 #include "caffe/util/format.hpp"
 #include "caffe/util/io.hpp"
 
-using caffe::Blob;
-using caffe::Caffe;
-using caffe::Datum;
-using caffe::Net;
+using caffe9::Blob;
+using caffe9::Caffe;
+using caffe9::Datum;
+using caffe9::Net;
 using std::string;
-namespace db = caffe::db;
+namespace db = caffe9::db;
 
 template<typename Dtype>
 int feature_extraction_pipeline(int argc, char** argv);
@@ -95,7 +95,7 @@ int feature_extraction_pipeline(int argc, char** argv) {
    */
   std::string feature_extraction_proto(argv[++arg_pos]);
   boost::shared_ptr<Net<Dtype> > feature_extraction_net(
-      new Net<Dtype>(feature_extraction_proto, caffe::TEST));
+      new Net<Dtype>(feature_extraction_proto, caffe9::TEST));
   feature_extraction_net->CopyTrainedLayersFrom(pretrained_binary_proto);
 
   std::string extract_feature_blob_names(argv[++arg_pos]);
@@ -153,7 +153,7 @@ int feature_extraction_pipeline(int argc, char** argv) {
         for (int d = 0; d < dim_features; ++d) {
           datum.add_float_data(feature_blob_data[d]);
         }
-        string key_str = caffe::format_int(image_indices[i], 10);
+        string key_str = caffe9::format_int(image_indices[i], 10);
 
         string out;
         CHECK(datum.SerializeToString(&out));

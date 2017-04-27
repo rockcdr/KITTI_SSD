@@ -2,7 +2,7 @@
 
 #include "caffe/layers/threshold_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 __global__ void ThresholdForward(const int n, const Dtype threshold,
@@ -28,4 +28,4 @@ void ThresholdLayer<Dtype>::Forward_gpu(const vector<Blob<Dtype>*>& bottom,
 INSTANTIATE_LAYER_GPU_FORWARD(ThresholdLayer);
 
 
-}  // namespace caffe
+}  // namespace caffe9

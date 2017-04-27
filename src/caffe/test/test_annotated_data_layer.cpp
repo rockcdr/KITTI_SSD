@@ -16,7 +16,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 using boost::scoped_ptr;
 
@@ -408,7 +408,7 @@ class AnnotatedDataLayerTest : public MultiDeviceTest<TypeParam> {
           num_with_center_value +=
               (center_value == blob_top_data_->cpu_data()[i * 2 + j]);
           // At TEST time, check that we always get center value.
-          if (phase == caffe::TEST) {
+          if (phase == caffe9::TEST) {
             EXPECT_EQ(center_value,
                       this->blob_top_data_->cpu_data()[i * channels_ + j])
                 << "debug: iter " << iter << " i " << i << " j " << j;
@@ -418,7 +418,7 @@ class AnnotatedDataLayerTest : public MultiDeviceTest<TypeParam> {
       // At TRAIN time, check that we did not get the center crop all 10 times.
       // (This check fails with probability 1-1/12^10 in a correct
       // implementation, so we call set_random_seed.)
-      if (phase == caffe::TRAIN) {
+      if (phase == caffe9::TRAIN) {
         EXPECT_LT(num_with_center_value, 10);
       }
     }
@@ -730,5 +730,5 @@ TYPED_TEST(AnnotatedDataLayerTest, TestReadCropTestLMDB) {
 }
 
 #endif  // USE_LMDB
-}  // namespace caffe
+}  // namespace caffe9
 #endif  // USE_OPENCV

@@ -3,7 +3,7 @@
 
 #include "caffe/layers/cudnn_pooling_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void CuDNNPoolingLayer<Dtype>::Forward_gpu(const vector<Blob<Dtype>*>& bottom,
@@ -37,5 +37,5 @@ void CuDNNPoolingLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 
 INSTANTIATE_LAYER_GPU_FUNCS(CuDNNPoolingLayer);
 
-}  // namespace caffe
+}  // namespace caffe9
 #endif

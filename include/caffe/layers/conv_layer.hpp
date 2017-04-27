@@ -9,7 +9,7 @@
 
 #include "caffe/layers/base_conv_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Convolves the input image with a bank of learned filters,
@@ -79,6 +79,6 @@ class ConvolutionLayer : public BaseConvolutionLayer<Dtype> {
   virtual void compute_output_shape();
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_CONV_LAYER_HPP_

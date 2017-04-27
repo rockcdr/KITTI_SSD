@@ -17,7 +17,7 @@
 #define CAFFE_TMP_DIR_RETRIES 100
 #endif
 
-namespace caffe {
+namespace caffe9 {
 
 using ::google::protobuf::Message;
 using ::boost::filesystem::path;
@@ -47,7 +47,7 @@ inline void MakeTempFilename(string* temp_filename) {
     temp_files_subpath = path_string;
   }
   *temp_filename =
-    (temp_files_subpath/caffe::format_int(next_temp_file++, 9)).string();
+    (temp_files_subpath/caffe9::format_int(next_temp_file++, 9)).string();
 }
 
 inline void GetTempDirname(string* temp_dirname) {
@@ -79,7 +79,7 @@ inline void GetTempFilename(string* temp_filename) {
     temp_files_subpath = path_string;
   }
   *temp_filename =
-    (temp_files_subpath/caffe::format_int(next_temp_file++, 9)).string();
+    (temp_files_subpath/caffe9::format_int(next_temp_file++, 9)).string();
 }
 
 bool ReadProtoFromTextFile(const char* filename, Message* proto);
@@ -274,6 +274,6 @@ void CVMatToDatum(const cv::Mat& cv_img, Datum* datum);
 void GetImageSize(const string& filename, int* height, int* width);
 #endif  // USE_OPENCV
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif   // CAFFE_UTIL_IO_H_

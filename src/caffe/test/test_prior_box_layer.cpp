@@ -10,7 +10,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 class PriorBoxLayerTest : public CPUDeviceTest<Dtype> {
@@ -363,4 +363,4 @@ TYPED_TEST(PriorBoxLayerTest, TestCPUAspectRatio) {
   }
 }
 
-}  // namespace caffe
+}  // namespace caffe9

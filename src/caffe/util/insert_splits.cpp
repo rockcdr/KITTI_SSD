@@ -7,7 +7,7 @@
 #include "caffe/common.hpp"
 #include "caffe/util/insert_splits.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 void InsertSplits(const NetParameter& param, NetParameter* param_split) {
   // Initialize by copying from the input NetParameter.
@@ -123,4 +123,4 @@ string SplitBlobName(const string& layer_name, const string& blob_name,
   return split_blob_name.str();
 }
 
-}  // namespace caffe
+}  // namespace caffe9

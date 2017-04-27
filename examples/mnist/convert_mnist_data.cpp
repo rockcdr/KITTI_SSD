@@ -27,7 +27,7 @@
 
 #if defined(USE_LEVELDB) && defined(USE_LMDB)
 
-using namespace caffe;  // NOLINT(build/namespaces)
+using namespace caffe9;  // NOLINT(build/namespaces)
 using std::string;
 
 DEFINE_string(backend, "lmdb", "The backend for storing the result");
@@ -122,7 +122,7 @@ void convert_dataset(const char* image_filename, const char* label_filename,
     label_file.read(&label, 1);
     datum.set_data(pixels, rows*cols);
     datum.set_label(label);
-    string key_str = caffe::format_int(item_id, 8);
+    string key_str = caffe9::format_int(item_id, 8);
     datum.SerializeToString(&value);
 
     // Put in db

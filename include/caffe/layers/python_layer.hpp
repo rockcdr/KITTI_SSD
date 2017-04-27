@@ -8,7 +8,7 @@
 
 namespace bp = boost::python;
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 class PythonLayer : public Layer<Dtype> {
@@ -53,6 +53,6 @@ class PythonLayer : public Layer<Dtype> {
   bp::object self_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif

@@ -10,7 +10,7 @@
 #include "caffe/test/test_caffe_main.hpp"
 #include "caffe/test/test_gradient_check_util.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 class MultinomialLogisticLossLayerTest : public CPUDeviceTest<Dtype> {
@@ -55,4 +55,4 @@ TYPED_TEST(MultinomialLogisticLossLayerTest, TestGradientCPU) {
       this->blob_top_vec_, 0);
 }
 
-}  // namespace caffe
+}  // namespace caffe9

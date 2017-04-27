@@ -4,7 +4,7 @@
 #include "caffe/layers/inner_product_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void InnerProductLayer<Dtype>::Forward_gpu(const vector<Blob<Dtype>*>& bottom,
@@ -76,4 +76,4 @@ void InnerProductLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>& top,
 
 INSTANTIATE_LAYER_GPU_FUNCS(InnerProductLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

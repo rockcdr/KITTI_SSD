@@ -9,7 +9,7 @@
 
 #include "caffe/layers/pooling_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 #ifdef USE_CUDNN
 /*
@@ -44,6 +44,6 @@ class CuDNNPoolingLayer : public PoolingLayer<Dtype> {
 };
 #endif
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_CUDNN_POOLING_LAYER_HPP_

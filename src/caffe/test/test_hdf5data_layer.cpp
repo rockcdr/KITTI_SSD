@@ -12,7 +12,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename TypeParam>
 class HDF5DataLayerTest : public MultiDeviceTest<TypeParam> {
@@ -133,4 +133,4 @@ TYPED_TEST(HDF5DataLayerTest, TestRead) {
   }
 }
 
-}  // namespace caffe
+}  // namespace caffe9

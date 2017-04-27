@@ -2,7 +2,7 @@
 
 #include "caffe/layers/neuron_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void NeuronLayer<Dtype>::Reshape(const vector<Blob<Dtype>*>& bottom,
@@ -12,4 +12,4 @@ void NeuronLayer<Dtype>::Reshape(const vector<Blob<Dtype>*>& bottom,
 
 INSTANTIATE_CLASS(NeuronLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

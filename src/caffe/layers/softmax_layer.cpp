@@ -4,7 +4,7 @@
 #include "caffe/layers/softmax_layer.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void SoftmaxLayer<Dtype>::Reshape(const vector<Blob<Dtype>*>& bottom,
@@ -92,4 +92,4 @@ STUB_GPU(SoftmaxLayer);
 
 INSTANTIATE_CLASS(SoftmaxLayer);
 
-}  // namespace caffe
+}  // namespace caffe9

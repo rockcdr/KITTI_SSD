@@ -12,7 +12,7 @@
 #include "caffe/layers/power_layer.hpp"
 #include "caffe/layers/split_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Normalize the input in a local region across or within feature maps.
@@ -89,6 +89,6 @@ class LRNLayer : public Layer<Dtype> {
   vector<Blob<Dtype>*> product_bottom_vec_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_LRN_LAYER_HPP_

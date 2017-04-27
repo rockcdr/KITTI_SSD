@@ -5,7 +5,7 @@
 #include "caffe/layers/infogain_loss_layer.hpp"
 #include "caffe/util/io.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 void InfogainLossLayer<Dtype>::LayerSetUp(
@@ -104,4 +104,4 @@ void InfogainLossLayer<Dtype>::Backward_cpu(const vector<Blob<Dtype>*>& top,
 
 INSTANTIATE_CLASS(InfogainLossLayer);
 REGISTER_LAYER_CLASS(InfogainLoss);
-}  // namespace caffe
+}  // namespace caffe9

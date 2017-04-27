@@ -9,7 +9,7 @@
 
 #include "caffe/layers/bias_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Computes a product of two input Blobs, with the shape of the
@@ -78,6 +78,6 @@ class ScaleLayer: public Layer<Dtype> {
 };
 
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_SCALE_LAYER_HPP_

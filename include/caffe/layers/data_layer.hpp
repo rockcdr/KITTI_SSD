@@ -12,7 +12,7 @@
 #include "caffe/proto/caffe.pb.h"
 #include "caffe/util/db.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 class DataLayer : public BasePrefetchingDataLayer<Dtype> {
@@ -34,6 +34,6 @@ class DataLayer : public BasePrefetchingDataLayer<Dtype> {
   DataReader<Datum> reader_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_DATA_LAYER_HPP_

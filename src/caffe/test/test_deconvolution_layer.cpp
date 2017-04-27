@@ -10,7 +10,7 @@
 #include "caffe/test/test_caffe_main.hpp"
 #include "caffe/test/test_gradient_check_util.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 // Since ConvolutionLayerTest checks the shared conv/deconv code in detail,
 // we'll just do a simple forward test and a gradient check.
@@ -301,4 +301,4 @@ TYPED_TEST(DeconvolutionLayerTest, TestGradient3D) {
       this->blob_top_vec_);
 }
 
-}  // namespace caffe
+}  // namespace caffe9

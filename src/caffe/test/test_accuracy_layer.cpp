@@ -11,7 +11,7 @@
 
 #include "caffe/test/test_caffe_main.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename Dtype>
 class AccuracyLayerTest : public CPUDeviceTest<Dtype> {
@@ -45,8 +45,8 @@ class AccuracyLayerTest : public CPUDeviceTest<Dtype> {
 
     const unsigned int prefetch_rng_seed = caffe_rng_rand();
     shared_ptr<Caffe::RNG> rng(new Caffe::RNG(prefetch_rng_seed));
-    caffe::rng_t* prefetch_rng =
-          static_cast<caffe::rng_t*>(rng->generator());
+    caffe9::rng_t* prefetch_rng =
+          static_cast<caffe9::rng_t*>(rng->generator());
     Dtype* label_data = blob_bottom_label_->mutable_cpu_data();
     for (int i = 0; i < blob_bottom_label_->count(); ++i) {
       label_data[i] = (*prefetch_rng)() % 10;
@@ -333,4 +333,4 @@ TYPED_TEST(AccuracyLayerTest, TestForwardCPUPerClassWithIgnoreLabel) {
   }
 }
 
-}  // namespace caffe
+}  // namespace caffe9

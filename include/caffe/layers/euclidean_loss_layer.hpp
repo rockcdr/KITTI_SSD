@@ -9,7 +9,7 @@
 
 #include "caffe/layers/loss_layer.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 /**
  * @brief Computes the Euclidean (L2) loss @f$
@@ -102,6 +102,6 @@ class EuclideanLossLayer : public LossLayer<Dtype> {
   Blob<Dtype> diff_;
 };
 
-}  // namespace caffe
+}  // namespace caffe9
 
 #endif  // CAFFE_EUCLIDEAN_LOSS_LAYER_HPP_

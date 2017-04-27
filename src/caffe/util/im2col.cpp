@@ -3,7 +3,7 @@
 #include "caffe/util/im2col.hpp"
 #include "caffe/util/math_functions.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 // Function uses casting from int to unsigned to compare if value of
 // parameter a is greater or equal to zero and lower than value of
@@ -231,4 +231,4 @@ template void col2im_nd_cpu<double>(const double* data_col,
     const int* dilation, double* data_im);
 
 
-}  // namespace caffe
+}  // namespace caffe9

@@ -10,7 +10,7 @@
 #include "caffe/test/test_caffe_main.hpp"
 #include "caffe/test/test_gradient_check_util.hpp"
 
-namespace caffe {
+namespace caffe9 {
 
 template <typename TypeParam>
 class Im2colLayerTest : public MultiDeviceTest<TypeParam> {
@@ -175,4 +175,4 @@ TYPED_TEST(Im2colLayerTest, TestRectGradient) {
       this->blob_top_vec_);
 }
 
-}  // namespace caffe
+}  // namespace caffe9
